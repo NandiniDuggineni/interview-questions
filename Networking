@@ -158,30 +158,68 @@ Data Integrity	  Checks for errors, retransmits lost packets	No error checking o
 Use Case	        Used when accuracy is critical            	Used when speed is more important than reliability
 Examples	        HTTP/HTTPS, SSH, FTP, SMTP	                DNS, VoIP, video streaming, online games
 
-What are the OSI and TCP/IP models?
+==============================
+10. What are the OSI and TCP/IP models?
+Layer No.	Name	          Description
+7	        Application   	User apps like browsers, email, etc.
+6       	Presentation	  Data formatting, encryption, compression
+5	        Session	Manages sessions (open, close, sync)
+4	        Transport	      Reliable delivery (TCP/UDP)
+3       	Network	        IP addressing, routing (IP)
+2       	Data Link	      MAC addresses, switches, Ethernet
+1       	Physical	      Cables, NICs, bits-on-the-wire
 
-What are common network devices? (Router, Switch, Hub, Gateway)
+TCP/IP Layer	Corresponds to OSI Layers	    Description
+Application	  OSI 7, 6, 5	                  Web, email, FTP, DNS, etc.
+Transport	    OSI 4	                        TCP or UDP
+Internet	    OSI 3	                        IP addressing and routing
+Network Access	OSI 2 and 1	                Physical hardware, MAC, Ethernet
 
-What is NAT (Network Address Translation)?
+"ATIN = Application, Transport, Internet, Network access"
 
-What is a firewall?
+============================
 
-What is the difference between a hub, switch, and router?
+11. What are common network devices? (Router, Switch, Hub, Gateway)
+Device	       Function / Purpose
+Router	       Connects different networks, routes data packets between them, often between LAN and WAN or internet.
+Switch	       Connects devices within the same local network (LAN), forwards data based on MAC addresses.
+Hub	           Basic device that broadcasts incoming packets to all connected devices (mostly obsolete).
+Modem	         Modulates and demodulates signals for internet access, connects home network to ISP.
+Access Point (AP)	Provides wireless network access, connects Wi-Fi devices to wired network.
+Firewall	     Filters incoming/outgoing traffic based on security rules, protects the network.
+Gateway	       Acts as a bridge between two different networks or protocols. Often a router also functions as a gateway.
+Repeater	     Amplifies or regenerates signals to extend network range.
+Bridge	       Connects two LAN segments, filters traffic to reduce collisions.
+Proxy Server	Intermediary between client and server, often for caching, filtering, or anonymity.
+Load Balancer	Distributes incoming network traffic across multiple servers for reliability and performance.
+
+hub alone cannot communicate with devices in another city.
+Router:
+Your home Wi-Fi router that connects your devices to the internet.
+Gateway:
+A company’s VoIP gateway converting phone calls into data packets over the internet, or a gateway connecting a private network to a cloud service that uses a different protocol.
+==================
+
+12. What is NAT (Network Address Translation)?
+
+13. What is a firewall?
+
+14. What is the difference between a hub, switch, and router?
 
 Intermediate Network Interview Questions
-Explain how ARP (Address Resolution Protocol) works.
+1. Explain how ARP (Address Resolution Protocol) works.
 
-What is a VLAN and why is it used?
+2. What is a VLAN and why is it used?
 
-What is a VPN and how does it work?
+3. What is a VPN and how does it work?
 
-What is port forwarding?
+4. What is port forwarding?
 
-What is the difference between a public IP and a private IP?
+5. What is the difference between a public IP and a private IP?
 
-What is the purpose of ICMP?
+6. What is the purpose of ICMP?
 
-Explain the three-way TCP handshake.
+7. Explain the three-way TCP handshake.
 
 What are some common network topologies?
 
