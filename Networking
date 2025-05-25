@@ -40,13 +40,81 @@ Uses radio waves to transmit data.
 An IP address (Internet Protocol address) is a unique numerical label assigned to every device connected to a computer network 
 that uses the Internet Protocol for communication.
 
-What is the difference between IPv4 and IPv6?
+Public IP Address:
+Used on the wider internet, unique globally, assigned by your ISP.
+Private IP Address:
+Used within private networks (like your home LAN), not unique globally.
 
-What is a subnet mask?
+============================
 
-What is a MAC address?
+4. What is the difference between IPv4 and IPv6?
+Feature	         IPv4        	IPv6
+Bit length	     32 bits	    128 bits
+Address count  	~4.3 billion	~340 undecillion
+NAT required	   Yes	         No - every device has its public ip
+Built-in security	No	         Yes (IPsec)
+Speed/Efficiency	Moderate	   More efficient
+Uses ARP (Address Resolution Protocol) Uses NDP (Neighbor Discovery Protocol)
 
-What is DNS and how does it work?
+What is IPsec? - IPsec stands for Internet Protocol Security.
+It is a suite of protocols used to secure IP communications by:
+Encrypting the data, authenticating the sender, Protecting the data from being tampered 
+
+Confidentiality — It encrypts your data, so no one can read it during transmission.
+Integrity — It ensures the data was not changed during transit.
+Authentication — It confirms that the data came from a trusted source.
+
+VPNs (Virtual Private Networks) — to securely connect remote users or sites.
+Secure communications between data centers or cloud environments.
+Site-to-site tunnels (e.g., AWS VPN uses IPsec under the hood).
+====================
+
+5. What is a subnet mask?
+A subnet mask is a number that helps divide an IP address into two parts:
+Network portion — identifies the specific network.
+Host portion — identifies the specific device (host) within that network.
+
+It tells devices which part of the IP address refers to the network and which part refers to the individual device.
+This helps routers and devices understand if another device is on the same local network (subnet) or 
+if the data needs to be sent through a router to a different network.
+
+The subnet mask looks similar to an IP address, for example: 255.255.255.0 - 11111111.11111111.11111111.00000000
+Example:
+IP Address: 192.168.1.10
+Subnet Mask: 255.255.255.0
+
+This means:
+Network part: 192.168.1
+Host part: .10
+
+AWS VPC and Subnet Masking Basics
+In AWS, when you create a VPC, you assign it a CIDR block (a range of IP addresses), for example: 10.0.0.0/16
+This /16 notation is CIDR (Classless Inter-Domain Routing) and tells you how many bits are for the network part.
+/16 means the first 16 bits are the network portion (equivalent subnet mask: 255.255.0.0).
+It defines which IP addresses belong to which subnet inside the VPC.
+Helps AWS route traffic internally between instances in different subnets or route traffic outside the VPC.
+Determines how many hosts (EC2 instances, etc.) can fit in each subnet.
+===========================================
+
+6. What is a MAC address?
+A MAC address (Media Access Control address) is a unique identifier assigned to a network interface card (NIC) in a device by manifacturer. 
+When your device wants to send data in a local network:
+It(router) uses ARP (Address Resolution Protocol) to find the MAC address of the destination.
+Data is then delivered using MAC addresses within the LAN.
+
+MAC addresses are crucial for:
+Ethernet and Wi-Fi communication
+Network filtering
+Access control (e.g., allowing only certain devices to connect)
+
+Can it be changed?
+Yes, it can be spoofed (changed temporarily using software), but the original MAC address is burned into the NIC at the factory.
+
+==============================
+
+7. What is DNS and how does it work?
+
+======================
 
 What is DHCP?
 
