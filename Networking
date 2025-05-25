@@ -110,15 +110,53 @@ Access control (e.g., allowing only certain devices to connect)
 Can it be changed?
 Yes, it can be spoofed (changed temporarily using software), but the original MAC address is burned into the NIC at the factory.
 
+what is NDP (Neighbor Discovery Protocol)?
+Neighbor Discovery Protocol, is a protocol used in IPv6 networks to manage communication between devices on the same local network (link-local communication).
+It replaces several functions from IPv4 protocols like:
+ARP (Address Resolution Protocol)
+ICMP Router Discovery
+ICMP Redirect
+
+DHCP (partially)
+IPv4 vs IPv6 (with NDP):
+Task	                IPv4 Uses	      IPv6 Uses
+Find MAC address	    ARP	            NDP
+Discover routers	    ICMP + manual 	NDP (RA messages)
+Detect duplicate IPs	Not built-in	  NDP (DAD feature)
+Assign IP address	    DHCP (mostly)	SLAAC via NDP
 ==============================
 
 7. What is DNS and how does it work?
+Domain Name System - hit domain name, it check for ip in cache, recursive resoler, root server, TLD server(.com,.in) , authoritative
+DNS host recored - A ipv4, AAAA - ipv6. CNAME	Alias for another name
 
 ======================
+8. What is DHCP? Dynamic Host Configuration Protocol.
+it is a network protocol that automatically assigns IP addresses and other network settings to devices (like laptops, phones, servers) when they connect to a network.
+This is known as the DORA process:
+Step	Name	      Description
+1️⃣	  Discover	  Device broadcasts: “Is there a DHCP server?”
+2️⃣	  Offer	      DHCP server replies: “Here's an IP you can use.”
+3️⃣	  Request     Device says: “Yes, I’d like to use that IP.”
+4️⃣	  Acknowledge	DHCP server confirms: “You're good to go!” and finalizes the assignment.
 
-What is DHCP?
+You connect your laptop to Wi-Fi.
+The router (which acts as the DHCP server) gives your laptop:
+IP: 192.168.1.45
+Subnet Mask: 255.255.255.0
+Gateway: 192.168.1.1
+DNS: 8.8.8.8
 
-What is the difference between TCP and UDP?
+=========================
+
+9. What is the difference between TCP and UDP?
+Feature	          TCP (Transmission Control Protocol)	        UDP (User Datagram Protocol)
+Connection	      Connection-oriented (requires a handshake)	Connectionless (no handshake)
+Reliability	      Reliable – ensures all data is received,    Unreliable – no guarantee of delivery or order
+Speed	            Slower (due to overhead for reliability)	  Faster (less overhead)
+Data Integrity	  Checks for errors, retransmits lost packets	No error checking or retransmission
+Use Case	        Used when accuracy is critical            	Used when speed is more important than reliability
+Examples	        HTTP/HTTPS, SSH, FTP, SMTP	                DNS, VoIP, video streaming, online games
 
 What are the OSI and TCP/IP models?
 
