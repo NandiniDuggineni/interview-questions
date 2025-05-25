@@ -1,9 +1,44 @@
 Basic Network Interview Questions
-What is a computer network?
 
-What are the different types of networks? (LAN, WAN, MAN, PAN)
+1. What is a computer network?
+A computer network is a collection of two or more computers and other devices that are connected together to share resources, exchange data, 
+and communicate with each other. These connections can be made using physical cables (like Ethernet) or wireless technologies (like Wi-Fi).
+Key points:
+Purpose: To enable communication and resource sharing (like files, printers, internet access).
+Types: Can be small (like a home network) or large (like the internet).
+Components: Includes computers, routers, switches, servers, and other devices.
+Communication: Data is sent in the form of packets using agreed protocols (e.g., TCP/IP).
 
-What is an IP address?
+==================================
+
+2. What are the different types of networks? (LAN, WAN, MAN, PAN)
+Local Area Network (LAN)
+Covers a small geographic area like a home, office, or building.
+Usually connected with Ethernet cables or Wi-Fi.
+Example: Your home Wi-Fi network connecting your laptop, phone, and printer.
+
+Wide Area Network (WAN)
+Spans large geographic areas, like cities, countries, or even globally.
+The internet is the largest example of a WAN.
+WANs often use leased telecommunication lines or satellite links.
+
+Metropolitan Area Network (MAN) - Larger than LAN but smaller than WAN.
+Covers a city or campus. Often used by organizations with multiple buildings in a city.
+
+Personal Area Network (PAN)
+Very small network around a person.
+Usually involves devices like smartphones, Bluetooth headphones, and laptops connected via Bluetooth or USB.
+
+Wireless Networks (Wi-Fi)
+Devices connect without cables.
+Common in homes, cafes, and public spaces.
+Uses radio waves to transmit data.
+
+===================================
+
+3. What is an IP address?
+An IP address (Internet Protocol address) is a unique numerical label assigned to every device connected to a computer network 
+that uses the Internet Protocol for communication.
 
 What is the difference between IPv4 and IPv6?
 
