@@ -10,7 +10,6 @@ Components: Includes computers, routers, switches, servers, and other devices.
 Communication: Data is sent in the form of packets using agreed protocols (e.g., TCP/IP).
 
 ==================================
-
 2. What are the different types of networks? (LAN, WAN, MAN, PAN)
 Local Area Network (LAN)
 Covers a small geographic area like a home, office, or building.
@@ -35,7 +34,6 @@ Common in homes, cafes, and public spaces.
 Uses radio waves to transmit data.
 
 ===================================
-
 3. What is an IP address?
 An IP address (Internet Protocol address) is a unique numerical label assigned to every device connected to a computer network 
 that uses the Internet Protocol for communication.
@@ -46,7 +44,6 @@ Private IP Address:
 Used within private networks (like your home LAN), not unique globally.
 
 ============================
-
 4. What is the difference between IPv4 and IPv6?
 Feature	         IPv4        	IPv6
 Bit length	     32 bits	    128 bits
@@ -67,8 +64,8 @@ Authentication — It confirms that the data came from a trusted source.
 VPNs (Virtual Private Networks) — to securely connect remote users or sites.
 Secure communications between data centers or cloud environments.
 Site-to-site tunnels (e.g., AWS VPN uses IPsec under the hood).
-====================
 
+===================================
 5. What is a subnet mask?
 A subnet mask is a number that helps divide an IP address into two parts:
 Network portion — identifies the specific network.
@@ -94,8 +91,8 @@ This /16 notation is CIDR (Classless Inter-Domain Routing) and tells you how man
 It defines which IP addresses belong to which subnet inside the VPC.
 Helps AWS route traffic internally between instances in different subnets or route traffic outside the VPC.
 Determines how many hosts (EC2 instances, etc.) can fit in each subnet.
-===========================================
 
+===========================================
 6. What is a MAC address?
 A MAC address (Media Access Control address) is a unique identifier assigned to a network interface card (NIC) in a device by manifacturer. 
 When your device wants to send data in a local network:
