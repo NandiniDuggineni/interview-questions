@@ -1,0 +1,134 @@
+Basic Network Interview Questions
+What is a computer network?
+
+What are the different types of networks? (LAN, WAN, MAN, PAN)
+
+What is an IP address?
+
+What is the difference between IPv4 and IPv6?
+
+What is a subnet mask?
+
+What is a MAC address?
+
+What is DNS and how does it work?
+
+What is DHCP?
+
+What is the difference between TCP and UDP?
+
+What are the OSI and TCP/IP models?
+
+What are common network devices? (Router, Switch, Hub, Gateway)
+
+What is NAT (Network Address Translation)?
+
+What is a firewall?
+
+What is the difference between a hub, switch, and router?
+
+Intermediate Network Interview Questions
+Explain how ARP (Address Resolution Protocol) works.
+
+What is a VLAN and why is it used?
+
+What is a VPN and how does it work?
+
+What is port forwarding?
+
+What is the difference between a public IP and a private IP?
+
+What is the purpose of ICMP?
+
+Explain the three-way TCP handshake.
+
+What are some common network topologies?
+
+What is QoS (Quality of Service)?
+
+Explain Load Balancing and how it works.
+
+What is the difference between symmetric and asymmetric encryption in networks?
+
+What is the difference between unicast, multicast, and broadcast?
+
+Advanced Network Interview Questions
+What is BGP and how does it work?
+
+Explain MPLS and its benefits.
+
+How does DNS resolution happen step-by-step?
+
+What are the differences between TCP congestion control algorithms?
+
+Explain how SSL/TLS works.
+
+What is a proxy server?
+
+How do you troubleshoot a slow network?
+
+What are some common network security threats and how do you mitigate them?
+
+What is a zero-trust network architecture?
+
+Explain SDN (Software Defined Networking).
+
+How do VLAN tagging and trunking work?
+
+What is ARP poisoning and how can it be prevented?
+
+Would you like me to:
+Provide detailed answers or explanations for any of these?
+
+Focus on a specific area like networking for cloud, security, or protocols?
+
+Share some scenario-based network interview questions?
+
+Just let me know!
+
+
+
+
+
+
+
+
+You said:
+Share some scenario-based network interview questions?
+ChatGPT said:
+Sure! Here are some scenario-based network interview questions that test your practical understanding of networking concepts and troubleshooting skills. These kinds of questions are common because they show how you apply knowledge to real-world problems.
+
+Scenario-Based Network Interview Questions
+You notice that users are complaining about slow internet access, but internal network applications are working fine. How would you troubleshoot this?
+
+A server in your data center cannot be reached from the internet, but internal users can access it without issues. What steps would you take to diagnose and fix the problem?
+
+Two remote offices are connected over a VPN, but users in one office cannot access shared resources in the other. What could be the reasons and how would you resolve it?
+
+You receive reports that a critical application is intermittently losing connectivity. How would you approach troubleshooting this intermittent network issue?
+
+During a routine check, you find that a switch port is receiving a lot of broadcast traffic, causing network congestion. What could be causing this, and how would you address it?
+
+You have been asked to segment the network to improve security and reduce broadcast traffic. How would you design and implement this using VLANs?
+
+A new device is connected to the network but it cannot get an IP address from the DHCP server. What could be the problem and how would you troubleshoot it?
+
+Your company wants to set up a disaster recovery site with real-time replication. What kind of network setup would you recommend to ensure minimal downtime and data loss?
+
+You observe that there is a sudden spike in network traffic coming from one host. How would you investigate and mitigate any potential security threat?
+
+After configuring a new router, users in one subnet cannot reach the internet, but users in another subnet can. What could be wrong with your router configuration?
+
+You are tasked with improving network performance for video conferencing. What network settings or configurations would you consider adjusting?
+
+There is a problem with DNS resolution causing delays in accessing websites. How would you troubleshoot and resolve this?
+
+Would you like me to provide detailed example answers for any of these scenarios? Or help you with how to structure your response in interviews?
+
+
+
+
+
+
+
+
