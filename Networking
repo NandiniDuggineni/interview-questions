@@ -387,84 +387,92 @@ Hybrid	  Very High	  High	  Very High	Large enterprise systems
 
 ===========================
 
-Explain Load Balancing and how it works.
+10. Explain Load Balancing and how it works.
 
-What is the difference between symmetric and asymmetric encryption in networks?
+=============================
+11. What is the difference between symmetric and asymmetric encryption in networks?
+Feature	            Symmetric	                          Asymmetric
+Keys used	          Same key for encrypt/decrypt	      Public + Private key pair
+Speed	              🔸 Fast                     	     🔹 Slower
+Security challenge	Key sharing is risky	              Easier key distribution (public key)
+Use Cases	          VPNs, internal systems, bulk data	  SSL/TLS, email, authentication
+Example Algorithms	AES, DES, RC4	                      RSA, ECC, DSA
 
-What is the difference between unicast, multicast, and broadcast?
+Symmetric Encryption - Uses the same key for both encryption and decryption. Both sender and receiver must share the same secret key beforehand.
+Asymmetric Encryption - Uses a pair of keys:
+Public key (shared with everyone)
+Private key (kept secret by the owner)
+Data encrypted with the public key can only be decrypted with the private key, and vice versa.
+Use Case:
+TLS/SSL (HTTPS), email encryption, SSH, digital signatures
+===============================
+12. What is the difference between unicast, multicast, and broadcast?
 
+============================
 Advanced Network Interview Questions
-What is BGP and how does it work?
+1. What is BGP and how does it work?
 
-Explain MPLS and its benefits.
+2. Explain MPLS and its benefits.
 
-How does DNS resolution happen step-by-step?
+3. How does DNS resolution happen step-by-step?
 
-What are the differences between TCP congestion control algorithms?
+4. What are the differences between TCP congestion control algorithms?
 
-Explain how SSL/TLS works.
+5. Explain how SSL/TLS works.
 
-What is a proxy server?
+6. What is a proxy server?
 
-How do you troubleshoot a slow network?
+7. How do you troubleshoot a slow network?
 
-What are some common network security threats and how do you mitigate them?
+8. What are some common network security threats and how do you mitigate them?
 
-What is a zero-trust network architecture?
+9. What is a zero-trust network architecture?
 
-Explain SDN (Software Defined Networking).
+10. Explain SDN (Software Defined Networking).
 
-How do VLAN tagging and trunking work?
+11. How do VLAN tagging and trunking work?
 
-What is ARP poisoning and how can it be prevented?
-
-Would you like me to:
-Provide detailed answers or explanations for any of these?
-
-Focus on a specific area like networking for cloud, security, or protocols?
-
-Share some scenario-based network interview questions?
-
-Just let me know!
+12. What is ARP poisoning and how can it be prevented?
 
 
 
 
-
-
-
-
-You said:
-Share some scenario-based network interview questions?
-ChatGPT said:
-Sure! Here are some scenario-based network interview questions that test your practical understanding of networking concepts and troubleshooting skills. These kinds of questions are common because they show how you apply knowledge to real-world problems.
-
+==================================================================
 Scenario-Based Network Interview Questions
-You notice that users are complaining about slow internet access, but internal network applications are working fine. How would you troubleshoot this?
+1.You notice that users are complaining about slow internet access, but internal network applications are working fine. How would you troubleshoot this?
 
-A server in your data center cannot be reached from the internet, but internal users can access it without issues. What steps would you take to diagnose and fix the problem?
+2. A server in your data center cannot be reached from the internet, but internal users can access it without issues. 
+What steps would you take to diagnose and fix the problem?
 
-Two remote offices are connected over a VPN, but users in one office cannot access shared resources in the other. What could be the reasons and how would you resolve it?
+3. Two remote offices are connected over a VPN, but users in one office cannot access shared resources in the other. 
+What could be the reasons and how would you resolve it?
 
-You receive reports that a critical application is intermittently losing connectivity. How would you approach troubleshooting this intermittent network issue?
+4. You receive reports that a critical application is intermittently losing connectivity. 
+How would you approach troubleshooting this intermittent network issue?
 
-During a routine check, you find that a switch port is receiving a lot of broadcast traffic, causing network congestion. What could be causing this, and how would you address it?
+5. During a routine check, you find that a switch port is receiving a lot of broadcast traffic, causing network congestion. 
+What could be causing this, and how would you address it?
 
-You have been asked to segment the network to improve security and reduce broadcast traffic. How would you design and implement this using VLANs?
+6. You have been asked to segment the network to improve security and reduce broadcast traffic. 
+How would you design and implement this using VLANs?
 
-A new device is connected to the network but it cannot get an IP address from the DHCP server. What could be the problem and how would you troubleshoot it?
+7. A new device is connected to the network but it cannot get an IP address from the DHCP server. 
+What could be the problem and how would you troubleshoot it?
 
-Your company wants to set up a disaster recovery site with real-time replication. What kind of network setup would you recommend to ensure minimal downtime and data loss?
+8. Your company wants to set up a disaster recovery site with real-time replication. 
+What kind of network setup would you recommend to ensure minimal downtime and data loss?
 
-You observe that there is a sudden spike in network traffic coming from one host. How would you investigate and mitigate any potential security threat?
+9. You observe that there is a sudden spike in network traffic coming from one host. 
+How would you investigate and mitigate any potential security threat?
 
-After configuring a new router, users in one subnet cannot reach the internet, but users in another subnet can. What could be wrong with your router configuration?
+10. After configuring a new router, users in one subnet cannot reach the internet, but users in another subnet can. 
+What could be wrong with your router configuration?
 
-You are tasked with improving network performance for video conferencing. What network settings or configurations would you consider adjusting?
+11. You are tasked with improving network performance for video conferencing. What network settings or configurations 
+would you consider adjusting?
 
-There is a problem with DNS resolution causing delays in accessing websites. How would you troubleshoot and resolve this?
+12. There is a problem with DNS resolution causing delays in accessing websites. How would you troubleshoot and resolve this?
 
-Would you like me to provide detailed example answers for any of these scenarios? Or help you with how to structure your response in interviews?
 
 
 
