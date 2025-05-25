@@ -439,13 +439,16 @@ Advanced Network Interview Questions
 
 ==================================================================
 Scenario-Based Network Interview Questions
-1.You notice that users are complaining about slow internet access, but internal network applications are working fine. How would you troubleshoot this?
+1. You notice that users are complaining about slow internet access, but internal network applications are working fine. How would you troubleshoot this?
+q: Single user\multiple users facing same issue. Is there any latest changes performed like upgrades? 
+
 
 2. A server in your data center cannot be reached from the internet, but internal users can access it without issues. 
 What steps would you take to diagnose and fix the problem?
 
 3. Two remote offices are connected over a VPN, but users in one office cannot access shared resources in the other. 
 What could be the reasons and how would you resolve it?
+q: Was this working previously or is it a new setup?
 
 4. You receive reports that a critical application is intermittently losing connectivity. 
 How would you approach troubleshooting this intermittent network issue?
