@@ -1,0 +1,77 @@
+Basic S3 Interview Questions
+What is Amazon S3?
+
+What is the difference between S3 and EBS?
+
+What are buckets in S3?
+
+What are S3 storage classes?
+
+Standard, Intelligent-Tiering, One Zone-IA, Glacier, Deep Archive.
+
+What is the maximum size of an S3 object?
+
+How does versioning work in S3?
+
+What are S3 access policies and how are they used?
+
+How does S3 handle data durability and availability?
+
+How is S3 billed?
+
+What is an S3 Lifecycle Policy?
+
+🔐 Security & Access Control Questions
+How can you secure data in S3?
+
+Encryption at rest (SSE-S3, SSE-KMS, SSE-C) and in transit (HTTPS).
+
+What’s the difference between a bucket policy and an IAM policy?
+
+How do pre-signed URLs work in S3?
+
+What is S3 Block Public Access and why is it important?
+
+How do you allow cross-account access to an S3 bucket?
+
+⚙️ Advanced & Performance-Oriented Questions
+How does S3 ensure high durability (11 nines)?
+
+How can you optimize performance when uploading large files to S3?
+
+Multipart upload, parallelism.
+
+How can you trigger events based on object uploads in S3?
+
+Using S3 Event Notifications to invoke Lambda, SNS, or SQS.
+
+What are S3 Object Lock and Legal Hold features?
+
+What’s the difference between S3 and Glacier?
+
+How can you host a static website on S3?
+
+🧠 Scenario-Based S3 Interview Questions
+A user accidentally deleted important files from S3. How would you recover them?
+
+If versioning is enabled, restore the previous version.
+
+Your application is serving large media files from S3, and users are reporting latency. How would you troubleshoot and fix this?
+
+Use CloudFront with S3, consider edge caching.
+
+You need to archive old log files but retrieve them occasionally. What’s the most cost-effective storage class?
+
+Glacier or Intelligent-Tiering (with archive access tiers).
+
+You need to restrict access to certain S3 objects to a specific VPC. How would you do this?
+
+Use a bucket policy with aws:SourceVpc or configure VPC endpoint policies.
+
+Your team needs to upload GBs of logs daily from multiple regions. How do you architect this in a scalable and efficient way?
+
+Use multipart uploads, cross-region replication, lifecycle policies.
+
+How would you enforce encryption for all objects uploaded to a bucket?
+
+Use a bucket policy that denies unencrypted uploads.
