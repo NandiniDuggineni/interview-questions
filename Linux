@@ -126,16 +126,18 @@ enable systemctl enable servicename. it creat symlink  for service to start on b
 verify with systemctl is-enabled servicename.
 
 🔹 Question 12: Your web server is showing a 502 Bad Gateway error. What steps do you take to troubleshoot?
-
+check status and logs of both web server and backend service proxy. 
+check backend service is runnign and reachable. check configuration file or any misconfigurations. 
+Ensure sufficient resouce available. cpu and memory
 
 🔹 Question 13: You need to schedule a recurring task to clean temporary files. How would you do this?
-
+rm rf /tmp/*, make it exicutable chmod +x filename, add cronjob - crontab -e 
 
 🔹 Question 14: You need to compile and install software from source. What steps do you follow?
-
+dwonload soucre file and extract it. read the read me file or install file for installing. then run ./install
 
 🔹 Question 15: You need to find and kill all processes started by a specific user. How do you do this?
-
+ps -u username | grep -v PID | awk '{PRINT $1}' | xargs kill -9
 
 
 
