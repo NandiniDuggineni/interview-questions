@@ -73,6 +73,44 @@ xfs - high performance, scalable and handling large file efficiently.
 
 Senario based linux 
 
+🔹 Question 1: You need to find out why a server is running slowly. What steps would you take? 
+checking overall load - top / htop. identify any process using high cpu. 
+iostst and iotop for disk i/o, free -m for memeory and df -h for disk. 
+netstst or ss command to check any network issue like port blocking.
+ping and traceroot for packet delay. 
+finally also review /var/log/syslogs or messages for kernel errors
+
+🔹 Question 2: A user's home directory is filling up disk space on the root partition. How would you resolve this?
+first we can check disk space usage of user -> du -sh /home/user to identify large file and directories.
+if possible move to larger file or partion to another partion which are available, using mv or sync command
+alternativly we can adive user to archieve the large files using ( tar,gzip)
+
+
+🔹 Question 3: You need to secure a web server against common vulnerabilities. What measures would you take?
+software should be uptodate (apt-yum)
+also use firewall using iptable or firwalld, REMOVE unnecessary services, default ports which are passing.
+Implement HTTPS using TLS/SSL certifications WAF we can enforce
+
+🔹 Question 4: The SSH service on your server is being targeted by brute force attacks. What steps would you take to mitigate this?
+we can change port 22 to less commantly used in /etc/ssh/sshd_config
+implement key based authentication. 
+only allow specific ip to connect 
+
+🔹 Question 5: You need to automate backups of a directory to a remote server. How would you do it?
+rsync for efficient file transfter. ste up ssh key based authentication between local nad remote servers. 
+wrote a script to run rsync with the desired optiond and schdule it using cron by adding a crontab -e. 
+
+🔹 Question 6: A critical service has crashed and won't restart. What steps do you take to troubleshoot and resolve the issue?
+🔹 Question 7: Your server's time is out of sync, causing issues with applications. How do you fix this?
+🔹 Question 8: You need to create a new user and ensure they have no shell access. How would you do this?
+🔹 Question 9: Your server is running out of memory and starting to swap heavily. What actions would you take?
+🔹 Question 10: You need to restrict a user’s disk usage. How would you implement this?
+🔹 Question 11: A service needs to start on boot. How do you ensure this?
+🔹 Question 12: Your web server is showing a 502 Bad Gateway error. What steps do you take to troubleshoot?
+🔹 Question 13: You need to schedule a recurring task to clean temporary files. How would you do this?
+🔹 Question 14: You need to compile and install software from source. What steps do you follow?
+🔹 Question 15: You need to find and kill all processes started by a specific user. How do you do this?
+
 
 
 
