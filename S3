@@ -13,7 +13,7 @@ we store in buckets and files as objects. it has globally unique name.
 Bucket policies, ACLS, IAM policies
 
 🔹 Question 6: What is versioning in Amazon S3, and why would you use it?
-by default versioning not enabled, by eneabling versioning we can enable versioning option.
+by default versioning not enabled, by eneabling versioning we can enable versioning option. manataing deferent versions of obejct. 
 
 🔹 Question 7: How does Amazon S3 ensure data durability?
 99.11(9's), s3 replicate the data to multiple available zones.  it also performes error checking, correction of data using cjecksums. 
@@ -27,7 +27,25 @@ Yes. public access should be enabled. in properties
 
 🔹 Question 10: How can you transfer data into and out of Amazon S3?
 using AWS console, cli, SDK and third party tools. Additioanly large scal data transfer can be optimized using Amazon s3
-transfter acceleration or aws snowball for offline data transfter. 
+transfter acceleration or aws snowball for offline data transfer. 
+
+11. Is there any possible way to restore the deleted s3 oblects?
+yes. versioning enabled and replication enabled. 
+
+12. life cycle policies in s3.
+life cycle policies are defined at the level of bucket with maximum limit 1000 policies per bucket. Different policies used to apply.
+
+13. How Replication rule helpful?
+If we set a replication rule we can reduce the cost by replication the necessary data.
+
+14. object lock in aws?
+it allow to enforce the retention period of the object atored in s3. also ensure obejct can't be delete, modified for a specified time.
+it maintain the immutability. Governs mode - which enable users with specific permission to override the retention setting
+complains mode - strick immutability until retention expires. can't modify
+
+15. encryption file s3?
+server side encryption - KMS manages the keys 
+client side encryption - client key 
 
 
 Basic S3 Interview Questions
