@@ -28,19 +28,23 @@ I would specify domains or origins that  are  permitted to access Grafana resour
 🔹 Question 6: Your organization needs to define data retention policies for Grafana to manage storage costs and comply with regulatory requirements. How would you configure data retention policies in Grafana?
 Configure data retention policies to specify how long metric data should be retained before automatically deleting or archiving. 
 I would define the retention period based on the business requirement. complain about regulations & storage capacity constraints.
-Additionally, data pruning mechanisum to regularly clean up expired data and optimize storage.
+Additionally, data pruning mechanisms to regularly clean up expired data and optimize storage.
 
 🔹 Question 7: Your organization uses LDAP for centralized user authentication. How would you configure Grafana to authenticate users against an LDAP directory?
-Graphana's LADP setting to conenct to the LADP directory and authentical users using LADP credentials.
+Graphana's LADP setting to connect to the LADP directory and authenticate users using LADP credentials.
 need to provide LADP server info and search base for query information. 
-map ladp attributes to Graphana user properties to synchronize user accounts and permissions.
+map LDAP attributes to Graphana user properties to synchronize user accounts and permissions.
 
 🔹 Question 8: You need to create a dynamic Grafana dashboard that allows users to select different time ranges and filter data based on specific criteria. How would you implement dashboard templating in Grafana?
-i would use graphana dashboard templating feature to defune variable that users can interact with to dynamically change dashboard content.
+I would use Graphana dashboard templating feature to define a variable that users can interact with to dynamically change dashboard content.
 would create template variable for time ranges, filters or other parameters and bind them to query parameters or  panel options.
-this would allow users to cusomize the dashboard view based on thier requirement.
+This would allow users to customize the dashboard view based on their requirements.
 
 🔹 Question 9: Your organization requires a custom visualization plugin for Grafana to display proprietary data sources. How would you develop and integrate a custom plugin into Grafana?
+would develop a custom visualization plugin using Graphana's plugin development framework and libraries. 
+I would implement the desired visualization logic, includeing data feting, redering and iteraction handling.
+once the plugin is developed, I would package it as graphana plugin and install it into the grafana instance.
+users can then use the custom visualize data from proprietary soucres.
 
 🔹 Question 10: You need to share Grafana dashboards with external stakeholders who do not have access to the Grafana instance. How would you share and embed Grafana dashboards in external websites or portals?
 
