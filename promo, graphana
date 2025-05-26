@@ -1,0 +1,55 @@
+senario.
+
+🔹 Question 1: You have been tasked with optimizing a Grafana dashboard that is experiencing slow loading times. How would you approach diagnosing and resolving performance issues?
+begin by analyzing the dashboard query and visualization to identify any insufficient queries or resource-intensive panels.
+I would optimize query by reducing the time range, limit the number of data points reterned and optimizing data base index.
+Additionally, i would review dashboard layout and consider consolidating panelor using caching mechanisms to improve performece.
+
+🔹 Question 2: A critical metric in your monitoring system has exceeded a predefined threshold, triggering an alert. How would you configure Grafana to send notifications to the appropriate stakeholders?
+use alerting rules in grfana to monitor relevent metric and define conditions for triggering alerts (CPU, meme )
+also specify notification channel, email/slack/pagerduty.
+set alert notation om dashboardfor the visisbity on active alerts.
+
+🔹 Question 3: You need to integrate a new data source into Grafana to visualize metrics from an external monitoring system. How would you configure Grafana to fetch data from this data source?
+i would install and configure appropricate data source plugin in grafana to connect to the external monitoring system.
+I would spacify connection details such as endpoint URL, authentication credentials and query paramaets.
+once the data source is configured, i would create dashboard and panels to visualize the metrics retrived from the data souce
+
+🔹 Question 4: Your organization requires a highly available Grafana deployment to ensure uninterrupted access to monitoring dashboards. How would you design and implement a high availability setup for Grafana?
+
+
+🔹 Question 5: Users are experiencing issues accessing Grafana dashboards embedded in external websites due to Cross-Origin Resource Sharing (CORS) restrictions. How would you configure Grafana to allow cross-origin requests?
+
+🔹 Question 6: Your organization needs to define data retention policies for Grafana to manage storage costs and comply with regulatory requirements. How would you configure data retention policies in Grafana?
+
+🔹 Question 7: Your organization uses LDAP for centralized user authentication. How would you configure Grafana to authenticate users against an LDAP directory?
+
+🔹 Question 8: You need to create a dynamic Grafana dashboard that allows users to select different time ranges and filter data based on specific criteria. How would you implement dashboard templating in Grafana?
+
+🔹 Question 9: Your organization requires a custom visualization plugin for Grafana to display proprietary data sources. How would you develop and integrate a custom plugin into Grafana?
+
+🔹 Question 10: You need to share Grafana dashboards with external stakeholders who do not have access to the Grafana instance. How would you share and embed Grafana dashboards in external websites or portals?
+
+🔹 Question 11: You need to configure advanced alerting rules in Grafana to detect complex patterns or anomalies in metric data. How would you define and configure advanced alerting rules?
+
+🔹 Question 12: Your team needs to add custom annotations to Grafana dashboards to mark important events or changes. How would you create and manage custom annotations in Grafana?
+
+🔹 Question 13: Your organization uses Grafana to visualize metrics from remote data sources located in different geographical regions. How would you configure Grafana to fetch data from remote data sources efficiently?
+
+🔹 Question 14: Your organization requires granular access control for Grafana to enforce security policies and restrict access to sensitive data. How would you configure role-based access control (RBAC) in Grafana?
+
+🔹 Question 15: You need to visualize data from multiple data sources in a single Grafana dashboard to correlate metrics and analyze trends. How would you perform cross-data source queries in Grafana?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
