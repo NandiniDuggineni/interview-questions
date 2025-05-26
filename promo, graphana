@@ -26,10 +26,17 @@ I would configure CORS(cross-origin resource sharing) settings to allow requests
 I would specify domains or origins that  are  permitted to access Grafana resource, ensuring cross-origin req are allowed without compramising security.
 
 🔹 Question 6: Your organization needs to define data retention policies for Grafana to manage storage costs and comply with regulatory requirements. How would you configure data retention policies in Grafana?
+Configure data retention policies to specify how long metric data should be retained before automatically deleting or archiving. 
+I would define the retention period based on the business requirement. complain about regulations & storage capacity constraints.
+Additionally, data pruning mechanisum to regularly clean up expired data and optimize storage.
 
 🔹 Question 7: Your organization uses LDAP for centralized user authentication. How would you configure Grafana to authenticate users against an LDAP directory?
+Graphana's LADP setting to conenct to the LADP directory and authentical users using LADP credentials.
+need to provide LADP server info and search base for query information. 
+map ladp attributes to Graphana user properties to synchronize user accounts and permissions.
 
 🔹 Question 8: You need to create a dynamic Grafana dashboard that allows users to select different time ranges and filter data based on specific criteria. How would you implement dashboard templating in Grafana?
+
 
 🔹 Question 9: Your organization requires a custom visualization plugin for Grafana to display proprietary data sources. How would you develop and integrate a custom plugin into Grafana?
 
