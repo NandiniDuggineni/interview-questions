@@ -77,7 +77,7 @@ RBAC enables organizzational to enforce security complains with data privacy reg
 🔹 Question 15: You need to visualize data from multiple data sources in a single Grafana dashboard to correlate metrics and analyze trends. How would you perform cross-data source queries in Grafana?
 I would use grafanas cross-data source querying feature to fetch and merge data from multiple data source in a signals query
 i would configure data source overrides to specify which data source to query and how to merge the results
-This allows users to create unified dashboards that combine data from 
+This allows users to create unified dashboards that combine data from difference source for comprehensive monitoring and analysis
 
 
 
