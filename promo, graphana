@@ -52,23 +52,32 @@ i would configure access permission to specify whether viewrs can only view or a
 users can then access the shared dashboard via the generated link or embed it into external websites or portals using the provided embed code.
 
 🔹 Question 11: You need to configure advanced alerting rules in Grafana to detect complex patterns or anomalies in metric data. How would you define and configure advanced alerting rules?
-I would use grafans advanced alerting features such as alerting threshold, anomalies and detection and complex query condition to define
-alerting rules that detect specific patterens or anomilies in metric data. 
-I would configure alerting conditions based on statistical analysis, trend detection or machine learning algoritham to trigger alerts wne
-predefined criteria met.
+I would use Grafana's advanced alerting features, such as alerting threshold, anomalies and detection and complex query condition to define
+Alerting rules that detect specific patterns or anomalies in metric data. 
+I would configure alerting conditions based on statistical analysis, trend detection or machine learning algorithm to trigger alerts wne
+predefined criteria are  met.
 
 🔹 Question 12: Your team needs to add custom annotations to Grafana dashboards to mark important events or changes. How would you create and manage custom annotations in Grafana?
- grafanas custom anotation feature to add annotation to dashboard, specifying relevent metadata such as event time stamps, descriptions and tags
- I would create annotations manually or programmatically using grafanas HTTP API or external data soucre.           
-Annotations can provide valuable context and visisbility into events or changes that imoact monitoring and analysis.
+ grafanas custom annotation feature to add annotation to the dashboard, specifying relevant metadata such as event time stamps, descriptions and tags
+ I would create annotations manually or programmatically using Grafana's HTTP API or an external data source.           
+Annotations can provide valuable context and visibility into events or changes that impact monitoring and analysis.
 
 🔹 Question 13: Your organization uses Grafana to visualize metrics from remote data sources located in different geographical regions. How would you configure Grafana to fetch data from remote data sources efficiently?
-
+I would configure Grafana's data source settings to optimize data retrieval and minimize latency when fetching data from remote.
+This may involve deploying Grafana instance closer to the remote data source, leveraging a caching mechanism, or optimizing
+network routes to reduce data transfer times.
+Additionally, I would monitor and analyze data retrieval performance to identify and address any bottlenecks or latency issues.
 
 🔹 Question 14: Your organization requires granular access control for Grafana to enforce security policies and restrict access to sensitive data. How would you configure role-based access control (RBAC) in Grafana?
+Configure RBAC settings to define role with specific permissions for users and groups.
+I would assign roles to users based on thier responsibilities and access requirements, controlling access to data sources, dashboard,
+folders and organization settings.
+RBAC enables organizzational to enforce security complains with data privacy regulations
 
 🔹 Question 15: You need to visualize data from multiple data sources in a single Grafana dashboard to correlate metrics and analyze trends. How would you perform cross-data source queries in Grafana?
-
+I would use grafanas cross-data source querying feature to fetch and merge data from multiple data source in a signals query
+i would configure data source overrides to specify which data source to query and how to merge the results
+This allows users to create unified dashboards that combine data from 
 
 
 
