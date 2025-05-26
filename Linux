@@ -9,4 +9,74 @@ it has a tree strcture, file and directories. /root, /bin, /home, /etc, /tmp
 4. shall in lunix
 shell using to execute the commands, bash, zsh, tcsh, this is way to interract with system. 
 
-5. how do you find files in linux.
+5. how do you find files in linux. what is grep
+file used to find the files, grep used to find the patteren like, searing specific word in different files.
+
+6. difference between soft link and hard link,
+softlink is a symbolic link ( short cut for creating file) which pointer to another file or directory.
+hardlink - it directly point to inode.
+
+7. How do we manager service in linux?
+systemctl, service, checkconfig or sysvinit based commands. 
+
+8. what is ssh - secure shell protocol to connect securly to remote machines from local machine. once login we can excute commands perform actions scurly
+
+9. package manager is a tool to install to instal package - yum reddhat and centos, apt ubutnu or debian. 
+
+10. kernel linux- it importent core compnent of a system, it act as interface between os and hardware. 
+
+11. how to archiveve, tar, gzip
+
+Adavaced linux - 
+
+1. difference between process and a tread?
+process is a independent program like java, apache, tread smaller unit with in th eprocess share the shared memory alloted for the process. 
+
+2. strace commadn used for debugging?
+debugging, which system calls the porgram doing. in what order it making what are the values?. we can see where it failing
+
+3. Cgroups and control gorups commands in linux.
+cgroup is a linux kernel feature that limits accounts for isolating usage.(CPU, memory, disk), depending in container we are running it automatically assign the resources
+
+4. SELinux enhace security
+it provides machanism for access scontrol of secuirty. it uses mandatory access control. it limits the scope of process. 
+
+5. how do you manage kernel modules in linux?
+using commands like - modprobe to add or remove module  -    lsmod - list currently loaded module
+configuration file /etc/modprobe.d can also be used to manage modules.
+
+6. purpose of /proc - if we want access process and kernal information /proc or pseudo will prvide the machanisum. it contains virtual files that has system info, cpu and memory info
+
+7. How to optimize the purformence of a linux system?
+performence can be optimized by tuning kernel parameter(sysctl), managing resource usage with groups, optimizing i/o schduling
+utilizing performence moniting tools like top, htop.
+
+8. hard-real time - complete given task in strickt time constraints
+
+9.iptables and commands - has a set of rules for allowing and denying the traffic which comes to the machine.
+
+10. what is namespace in linux? - name space is the feature of linux kernel such as  process id and network interface and file system. They are fundamental for containers technologies 
+allowing each container to have own isolated environment. 
+
+11. concept of load avarg in linux ? - averg of no.of process which are running or uninteruptable state. it usallu displaced in 
+
+12. Nice command - it control scheduling prority process. default prority is 0, higher priority has (lower nice value), menas zero has higher priority.
+
+13. systemd is a system manager for linux os. it manages system services like initializing restarting, dependency management and service monitoring.
+
+14. Swap file crete in linux? create empty file with dd -if=/dev/zero of=/swapfile bs-IM count-1024
+set correct permission with chomd, settup swap space with mkswap/swapfile. enable swapfile with swapon/swapfile
+add it to /etc/fstab to make persistent across reboots. 
+
+15. ext4, xfs - ext4 - known for its simplysity and robustness. it supports large files and volumes nad journeling and defragmentation.
+xfs - high performance, scalable and handling large file efficiently. 
+
+Senario based linux 
+
+
+
+
+
+
+
+
