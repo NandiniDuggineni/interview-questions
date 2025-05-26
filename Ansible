@@ -155,6 +155,98 @@ var is the high proirty than defaults.
 give this in ansible configuration file - log_path= /path/tp/logfile
 or we can use -vvvv
 
+Ansible interview questions by chat gpt
+
+ Basic Ansible Interview Questions
+What is Ansible and how does it work?
+
+What are the advantages of using Ansible?
+
+What is an inventory file in Ansible?
+
+What is a playbook in Ansible?
+
+What is the difference between a playbook and an ad-hoc command?
+
+How does Ansible connect to remote hosts?
+
+What is YAML and why is it used in Ansible?
+
+What are modules in Ansible? Name a few commonly used ones.
+
+What is the Ansible configuration file and where is it located?
+
+What is the difference between copy and template modules?
+
+⚙️ Intermediate Ansible Interview Questions
+How do variables work in Ansible?
+
+What are facts in Ansible and how can you use them?
+
+What is the purpose of handlers in Ansible?
+
+What are roles in Ansible and why are they useful?
+
+What are Ansible Galaxy and its use cases?
+
+How do you implement error handling in Ansible playbooks?
+
+How do you pass variables at runtime in Ansible?
+
+What is idempotency in Ansible and why is it important?
+
+How can you run only specific tasks from a playbook?
+
+How do you encrypt sensitive data in Ansible?
+
+Using Ansible Vault
+
+🧠 Advanced Ansible Interview Questions
+How does Ansible compare to other tools like Puppet or Chef?
+
+What are dynamic inventories and how do you use them?
+
+How do you use loops in Ansible?
+
+How can you make a task run only when a certain condition is met?
+
+How do you manage environments (dev, staging, prod) in Ansible?
+
+Explain Ansible's execution flow.
+
+How do you manage secrets in a secure and scalable way using Vault or HashiCorp Vault with Ansible?
+
+How do you handle dependencies between roles or tasks?
+
+What is block and how is it different from tasks?
+
+How would you scale Ansible for 5000+ nodes in production?
+
+📦 Scenario-Based Ansible Interview Questions
+You need to deploy an application on multiple servers, but each server has a slightly different configuration. How would you manage this in Ansible?
+
+Use host/group variables or include conditional logic in tasks.
+
+You have a playbook that installs Apache and starts the service. How would you make sure it only restarts if the configuration file changes?
+
+Use notify with a handler.
+
+Your playbook keeps failing halfway through. How would you debug and fix it?
+
+Use -vvv, --start-at-task, and --step flags, check error messages, use debug module.
+
+You need to execute a task only if a file exists on the remote server. How would you do this in Ansible?
+
+Use when with stat module.
+
+How would you structure your Ansible project for a microservices-based application with 5+ components?
+
+Use roles, one per service; create environment-specific variable directories; manage secrets via vault.
+
+You need to provision cloud resources and configure them afterward. How would you do this with Ansible?
+
+Use Ansible with cloud modules (e.g., amazon.aws.ec2, google.cloud.gce) for provisioning and follow up with configuration roles.
+
 
 
 
