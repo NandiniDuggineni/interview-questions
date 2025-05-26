@@ -130,6 +130,31 @@ playbook monitor system health and performence metricks, detect anomilies  or fa
 By integrating Ansible with monitoring and alerting systems, I can orchestrate self- healing workflows that proactively respond to incidents nad minimize downtime,
 esurinh continous operation of critical systems. 
 
+Another set of senario based
+
+1. How to limit ansible run for a single machine only?
+using flags - ansible-playbook site.yaml --limit "dev.com" / "host1,host2"
+
+2. How to ignore ansible authenticity checking?
+set anvironment variables below to false: Ansible_host_hey_checking
+set parameter in ansible.cfg file - defaults - host_key_cehcking=false
+
+3.How to run one task in anisble playbook - using tags
+
+4.Is there default variable which contains the playbook absolute path?
+Variable playbook_dir can be used to get the absolute path of the playbook directory path/
+
+5. different forms if defing ssh key.
+in playbook we can specify ssh hey file using --key-file on th command line
+we can slo use variable inside inventory or host vars - ansible_ssh_private_key_file.
+
+6. difference between vars and default in ansible role directory structure.
+var is the high proirty than defaults.
+
+7. how do I get log details for ansible playbook execution?
+give this in ansible configuration file - log_path= /path/tp/logfile
+or we can use -vvvv
+
 
 
 
