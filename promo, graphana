@@ -36,7 +36,9 @@ need to provide LADP server info and search base for query information.
 map ladp attributes to Graphana user properties to synchronize user accounts and permissions.
 
 🔹 Question 8: You need to create a dynamic Grafana dashboard that allows users to select different time ranges and filter data based on specific criteria. How would you implement dashboard templating in Grafana?
-
+i would use graphana dashboard templating feature to defune variable that users can interact with to dynamically change dashboard content.
+would create template variable for time ranges, filters or other parameters and bind them to query parameters or  panel options.
+this would allow users to cusomize the dashboard view based on thier requirement.
 
 🔹 Question 9: Your organization requires a custom visualization plugin for Grafana to display proprietary data sources. How would you develop and integrate a custom plugin into Grafana?
 
