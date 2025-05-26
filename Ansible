@@ -47,8 +47,8 @@ plugins, API, and webhooks. Git, jenkins and Prometheus, and graphana.
 
 Advanced interview questions.
 1. what are ansible vault? how they manage sensitive data?
-they encrypt (passwords, ssh keys or any api's) data. we can use ansible-vault to create encrypted data and reference it in a playbook using --ask-vault-pass.
-also we can store vault pass in the file and we can reference then in the playbook. 
+they encrypt (passwords, ssh keys or any api's) data. we can use ansible-vault to create encrypted data and reference it in a playbook 
+using --ask-vault-pass. also we can store vault pass in the file and we can reference then in the playbook. 
 
 2. what are ansible collections?
 these are simply some one curated collection like role modules, playbook and those distributed through Ansible Galaxy and also private repo. 
@@ -66,7 +66,20 @@ test infra used to perform integration testing by verifying expected system stat
 playbook can automate, two identical environments and switch traffic between those using 
 
 6. How to handle rolling updates and zero down time deployments?
-s
+using strategies such as serial execution and health checks and service monitoring.
+Ansible playbook can automate the process of updating infrastucture components one by ine while ensuing that services remain available and
+responsive throught the deployment process. 
+
+7. what are ansible tower job templates and how do you use the to automate tasks?
+Ansible tower job teamplates are reuseable configuratios for running ansible playbook or ad-hoc commands on managed hosts.
+They allow you to define the playbook, inventory, credentials and other parameters needed to execute tasks,
+making it easy to automate routine operations and workflows in tower's web interface or through API calls.
+
+8. Explain how you can orchestrate complex workflows and dependecies using ansible tower workflows?
+tower alllow to archestrate complex automation workflow with dependecies and conditional logic and manula approvals.
+workflows can chain together multiple job templates, running tasks in parallel or sequentially and waiting for user input or
+external trigger before proceeding to the next step.
+This enable you to automate end-to-end process and stream line IT operation effecintly. 
 
 
 Senario based 
