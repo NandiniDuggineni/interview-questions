@@ -14,7 +14,7 @@ It has a set of info about managed nodes and group them. iventory -i
 it generally maintains the state of the system. it check current state wth desired state.
 
 6. Ansible roles?
-to reduce the complexity of playbook, or if want to reuse then we will go with role. there is a directory strcture it follows.
+To reduce the complexity of playbook, or if want to reuse then we will go with role. there is a directory strcture it follows.
 
 7. Adhoc commands and playbook
 adhoc is for one time task, playbook is a kind of automating repetative task. we want to excute multiple time.
@@ -26,8 +26,11 @@ Ansible has Ansible Vault, Env variable or external vault Harshi corp vault
 It is a hub, find, share, and reuse roles playbook, and these can be reused whenever needed. It's kind of a centralized repository for community content.
 
 10. what is ansible tower?
-It's a GUI web-based tool. It has a dashboard. It has RBAC (role-based access control). Schedule jobs. centralize login macanizium. We can remove dependencies so anyone can execute.
-Ansible credential vault we can use in playbook.
+It's a GUI web-based tool. It has a dashboard. It has RBAC (role-based access control). Schedule jobs. centralize login macanizium. 
+We can remove dependencies so anyone can execute. Ansible credential vault we can use in playbook.
+Ansible tower provides built in support for managing secrets and sensitive data using credentials managing features. 
+you can store the credentials such as ssh key, password and API tokens securly in tower credential vaults and referece them in playbook
+and job templates without exposing them in plain text.
 
 11. How to debug?
 verbose -vvvv it gives detailed output. Also, we can use a dry run. Asible-playbook playbookname -C
@@ -51,19 +54,22 @@ they encrypt (passwords, ssh keys or any api's) data. we can use ansible-vault t
 using --ask-vault-pass. also we can store vault pass in the file and we can reference then in the playbook. 
 
 2. what are ansible collections?
-these are simply some one curated collection like role modules, playbook and those distributed through Ansible Galaxy and also private repo. 
-Unlike role, it allows versioning it also dependency management and distribution if collections across projects.
+AC are the collection like role, modules, playbook, plugin and those distributed through Ansible Galaxy and also private repo. 
+Unlike role, it allows versioning, dependency management and distribution of reusable automation content across projects.
 
 3. how we can implement multienvironment deployment using ansible.
-we can make use of inventory file for defining different env ( dev, prepod and prod). Dynamic inventory plugins and group variables for flexible environment management. 
+we can make use of inventory file for defining different env ( dev, prepod and prod). 
+Dynamic inventory plugins and group variables for flexible environment management. 
 variables and configuration settings to customise these env, 
 
 4. Strategies to test playbooks and roles?
-we have Ansible tools like AnsibleLint (systax error), Molecule automates the testing across different platforms using docker or vagrant. 
-test infra used to perform integration testing by verifying expected system state changes. 
+Ansible playbooks and roles can tested using tools like Ansible-lint (systax error), 
+Molecule -  automates the testing across different platforms using docker or vagrant. 
+test infra -  used to perform integration testing by verifying expected system state changes. 
 
 5. How to we implemet blue-green ?
-playbook can automate, two identical environments and switch traffic between those using 
+blue green deployement can be implemented in ansible by maintaing two indetical environments by switching traffic between load balancer
+it automate the deployment process include providing, configuring and updating infrastucture companents for both env.
 
 6. How to handle rolling updates and zero down time deployments?
 using strategies such as serial execution and health checks and service monitoring.
