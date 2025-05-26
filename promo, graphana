@@ -2,23 +2,28 @@ senario.
 
 🔹 Question 1: You have been tasked with optimizing a Grafana dashboard that is experiencing slow loading times. How would you approach diagnosing and resolving performance issues?
 begin by analyzing the dashboard query and visualization to identify any insufficient queries or resource-intensive panels.
-I would optimize query by reducing the time range, limit the number of data points reterned and optimizing data base index.
-Additionally, i would review dashboard layout and consider consolidating panelor using caching mechanisms to improve performece.
+I would optimize the query by reducing the time range, limiting the number of data points returned and optimizing data base index.
+Additionally, i would review the dashboard layout and consider consolidating panelor using caching mechanisms to improve performance.
 
 🔹 Question 2: A critical metric in your monitoring system has exceeded a predefined threshold, triggering an alert. How would you configure Grafana to send notifications to the appropriate stakeholders?
-use alerting rules in grfana to monitor relevent metric and define conditions for triggering alerts (CPU, meme )
+Use alerting rules in Grafana to monitor relevant metrics and define conditions for triggering alerts (CPU, meme )
 also specify notification channel, email/slack/pagerduty.
-set alert notation om dashboardfor the visisbity on active alerts.
+set alert notation om dashboardfor the visibility on active alerts.
 
 🔹 Question 3: You need to integrate a new data source into Grafana to visualize metrics from an external monitoring system. How would you configure Grafana to fetch data from this data source?
-i would install and configure appropricate data source plugin in grafana to connect to the external monitoring system.
-I would spacify connection details such as endpoint URL, authentication credentials and query paramaets.
-once the data source is configured, i would create dashboard and panels to visualize the metrics retrived from the data souce
+i would install and configure the appropriate data source plugin in Grafana to connect to the external monitoring system.
+I would specify connection details such as endpoint URL, authentication credentials, and query parameters.
+once the data source is configured, i would create dashboard and panels to visualize the metrics retrived from the data source.
 
 🔹 Question 4: Your organization requires a highly available Grafana deployment to ensure uninterrupted access to monitoring dashboards. How would you design and implement a high availability setup for Grafana?
-
+I would deploy multiple instances of Graohana behind load balancer to distribute traffic and ensure redundancy.
+I would configure session affinity to maintain user sessions across grphana instance and use shared storage for storing session data
+and dashboard configuration. 
+Additionally, i would set up database replication and clustering to ensure data consistency and fault tolerance.
 
 🔹 Question 5: Users are experiencing issues accessing Grafana dashboards embedded in external websites due to Cross-Origin Resource Sharing (CORS) restrictions. How would you configure Grafana to allow cross-origin requests?
+I would configure CORS(cross-origin resource sharing) settings to allow requests from specific domain or origins using allow_origin config option
+I would specify domains or origins that  are  permitted to access Grafana resource, ensuring cross-origin req are allowed without compramising security.
 
 🔹 Question 6: Your organization needs to define data retention policies for Grafana to manage storage costs and comply with regulatory requirements. How would you configure data retention policies in Grafana?
 
