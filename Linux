@@ -101,14 +101,39 @@ rsync for efficient file transfter. ste up ssh key based authentication between 
 wrote a script to run rsync with the desired optiond and schdule it using cron by adding a crontab -e. 
 
 🔹 Question 6: A critical service has crashed and won't restart. What steps do you take to troubleshoot and resolve the issue?
+systemctl status servicename and journalctl -u servername
+check for configuration errors and missing dependencies.
+verify the figuration file syntax, nginx -t and napachctl
+
 🔹 Question 7: Your server's time is out of sync, causing issues with applications. How do you fix this?
+install and configure ntpd or chrony to sysnc time. check status with stpd -p
+ensure correct time zone using command timedatectl
+
 🔹 Question 8: You need to create a new user and ensure they have no shell access. How would you do this?
+user adduser command with the -s option to set user shall to /sbin/nologin or /bin/false
+example : useradd -s /sbin/nologin username.
+
 🔹 Question 9: Your server is running out of memory and starting to swap heavily. What actions would you take?
+ps aux --sort=-%mem, top, stop and restart process. then increage swap space or create new swap file. 
+optimizxe menmory or add new memory.
+
 🔹 Question 10: You need to restrict a user’s disk usage. How would you implement this?
+we can use disk quotas, first enable disk quotas on the file system by modifying /etc/fastab and remount the file system. 
+then use edquota to set user-specific disk quotass and quotaon to enable quotas. check usage with quota.
+
 🔹 Question 11: A service needs to start on boot. How do you ensure this?
+enable systemctl enable servicename. it creat symlink  for service to start on boot. 
+verify with systemctl is-enabled servicename.
+
 🔹 Question 12: Your web server is showing a 502 Bad Gateway error. What steps do you take to troubleshoot?
+
+
 🔹 Question 13: You need to schedule a recurring task to clean temporary files. How would you do this?
+
+
 🔹 Question 14: You need to compile and install software from source. What steps do you follow?
+
+
 🔹 Question 15: You need to find and kill all processes started by a specific user. How do you do this?
 
 
