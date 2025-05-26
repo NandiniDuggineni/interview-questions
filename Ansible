@@ -15,12 +15,14 @@ it generally maintains the state of the system. it check current state wth desir
 
 6. Ansible roles?
 To reduce the complexity of playbook, or if want to reuse then we will go with role. there is a directory strcture it follows.
+TASK, variables, handelers, in a directory structure.
 
 7. Adhoc commands and playbook
 adhoc is for one time task, playbook is a kind of automating repetative task. we want to excute multiple time.
 
 8. How do you handle sensitive data?
 Ansible has Ansible Vault, Env variable or external vault Harshi corp vault
+
 
 9. purpose of ansible galaxy?
 It is a hub, find, share, and reuse roles playbook, and these can be reused whenever needed. It's kind of a centralized repository for community content.
@@ -50,8 +52,8 @@ plugins, API, and webhooks. Git, jenkins and Prometheus, and graphana.
 
 Advanced interview questions.
 1. what are ansible vault? how they manage sensitive data?
-they encrypt (passwords, ssh keys or any api's) data. we can use ansible-vault to create encrypted data and reference it in a playbook 
-using --ask-vault-pass. also we can store vault pass in the file and we can reference then in the playbook. 
+they encrypt sensitive data (passwords, ssh keys or any api's). we can use ansible-vault to create encrypted data and reference it in a playbook 
+using --ask-vault-pass or by storing vault pass in the file.
 
 2. what are ansible collections?
 AC are the collection like role, modules, playbook, plugin and those distributed through Ansible Galaxy and also private repo. 
