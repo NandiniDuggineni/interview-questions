@@ -1,1 +1,108 @@
+what is a configuration management tool or Ansible? 
+it's an open source configuration management tool. it also helps to simplify complex problems and to automate repetitive work, which is faster and efficient. 
+
+2. Difference between ansible and other tools.
+Ansible is agent less. Yaml syntax. 
+
+3. what is ansible plabook.
+its yaml file, it has set of instruction which has to exicute om managed nodes. we can automate complex management like configuration management or deploying application. 
+
+4. Inventory in Ansible?
+It has a set of info about managed nodes and group them. iventory -i
+
+5. concept of idempotence?
+it generally maintains the state of the system. it check current state wth desired state.
+
+6. Ansible roles?
+to reduce the complexity of playbook, or if want to reuse then we will go with role. there is a directory strcture it follows.
+
+7. Adhoc commands and playbook
+adhoc is for one time task, playbook is a kind of automating repetative task. we want to excute multiple time.
+
+8. How do you handle sensitive data?
+Ansible has Ansible Vault, Env variable or external vault Harshi corp vault
+
+9. purpose of ansible galaxy?
+It is a hub, find, share, and reuse roles playbook, and these can be reused whenever needed. It's kind of a centralized repository for community content.
+
+10. what is ansible tower?
+It's a GUI web-based tool. It has a dashboard. It has RBAC (role-based access control). Schedule jobs. centralize login macanizium. We can remove dependencies so anyone can execute.
+Ansible credential vault we can use in playbook.
+
+11. How to debug?
+verbose -vvvv it gives detailed output. Also, we can use a dry run. Asible-playbook playbookname -C
+
+12. Ansible facts.
+Info about managed nodes is collected by Ansible about managed nodes. like which os, IP address, hardware, and custom info used by managed nodes. ex: we want to run the playbook in Windows
+
+13. Handling error
+it support error handling, ignore_errors, failed_when, and block statements. Log error messages and take appropriate actions based on the output.
+
+14. What is RBAC?
+as an admin, we can define granular permissions to different users/teams. Only authorized users can log in, mainly to enhance security. 
+
+15. Integrate Ansible with other tools?
+plugins, API, and webhooks. Git, jenkins and Prometheus, and graphana. 
+
+
+Advanced interview questions.
+1. what are ansible vault? how they manage sensitive data?
+they encrypt (passwords, ssh keys or any api's) data. we can use ansible-vault to create encrypted data and reference it in a playbook using --ask-vault-pass.
+also we can store vault pass in the file and we can reference then in the playbook. 
+
+2. what are ansible collections?
+these are simply some one curated collection like role modules, playbook and those distributed through Ansible Galaxy and also private repo. 
+Unlike role, it allows versioning it also dependency management and distribution if collections across projects.
+
+3. how we can implement multienvironment deployment using ansible.
+we can make use of inventory file for defining different env ( dev, prepod and prod). Dynamic inventory plugins and group variables for flexible environment management. 
+variables and configuration settings to customise these env, 
+
+4. Strategies to test playbooks and roles?
+we have Ansible tools like AnsibleLint (systax error), Molecule automates the testing across different platforms using docker or vagrant. 
+test infra used to perform integration testing by verifying expected system state changes. 
+
+5. How to we implemet blue-green ?
+playbook can automate, two identical environments and switch traffic between those using 
+
+6. How to handle rolling updates and zero down time deployments?
+s
+
+
+Senario based 
+🔹 Question 1: You need to provision a new server instance on AWS with Ansible. How would you approach this task?
+The playbook would specify the desired instance type, region, security group and other configuration. also, tags and ssh key pairs
+
+🔹 Question 2: You have multiple web servers running Apache, and you need to ensure that a specific configuration file is consistent across all servers. How would you achieve this with Ansible?
+I would create ansible role that has tasks template the configuration file with variables, distribute to all webservers and maintain desired state. restart services when ever needed.
+
+🔹 Question 3: Your team is deploying a new version of a web application across multiple servers. How would you use Ansible to automate the deployment process?
+ansible playbook that pulls the latest version of the application from version control & copy it to the target server and perform necessary configuration updates.
+playbook/role tasks would used to stop the existing application & deploy new version and start the updated application ensuring smooth and consistent deployment process.
+
+🔹 Question 4: You want to perform rolling updates to a group of servers without causing downtime. How would you implement this using Ansible?
+
+
+🔹 Question 5: You have a load balancer that needs to be updated with the IP addresses of newly provisioned servers. How would you automate this task with Ansible?
+🔹 Question 6: Your organization requires regular security patching of servers. How would you automate the process using Ansible?
+🔹 Question 7: You need to automate the backup of a MySQL database running on multiple servers. How would you accomplish this with Ansible?
+🔹 Question 8: In the event of a disaster, you need to restore a critical application to a previous state using Ansible. How would you implement this?
+🔹 Question 9: You have separate development, staging, and production environments, each with different configuration settings. How would you manage deployments across these environments using Ansible?
+🔹 Question 10: You need to configure a high availability setup for a critical application using Ansible. How would you approach this task?
+🔹 Question 11: You're managing a Docker Swarm cluster and need to deploy a new service across multiple nodes. How would you orchestrate this deployment with Ansible?
+🔹 Question 12: You're responsible for managing a Kubernetes cluster and need to automate routine maintenance tasks. How would you use Ansible for cluster management?
+🔹 Question 13: Your organization needs to ensure compliance with security policies and regulatory requirements. How would you use Ansible to perform compliance checks?
+🔹 Question 14: Your organization is migrating workloads from on-premises data centers to the cloud. How would you orchestrate the migration process with Ansible?
+🔹 Question 15: You want to implement self-healing capabilities for critical systems using Ansible. How would you design and deploy self-healing workflows?
+
+
+
+
+
+
+
+
+
+
+
 
