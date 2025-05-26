@@ -42,18 +42,28 @@ This would allow users to customize the dashboard view based on their requiremen
 
 🔹 Question 9: Your organization requires a custom visualization plugin for Grafana to display proprietary data sources. How would you develop and integrate a custom plugin into Grafana?
 would develop a custom visualization plugin using Graphana's plugin development framework and libraries. 
-I would implement the desired visualization logic, includeing data feting, redering and iteraction handling.
+I would implement the desired visualization logic, including data fetching, rendering and interaction handling.
 once the plugin is developed, I would package it as graphana plugin and install it into the grafana instance.
-users can then use the custom visualize data from proprietary soucres.
+users can then use the custom visualize data from proprietary sources.
 
 🔹 Question 10: You need to share Grafana dashboards with external stakeholders who do not have access to the Grafana instance. How would you share and embed Grafana dashboards in external websites or portals?
-
+i would use dashboard sharing and embedding features to generate shareable links or embed codes for dashboard.
+i would configure access permission to specify whether viewrs can only view or also edit the dashboard.
+users can then access the shared dashboard via the generated link or embed it into external websites or portals using the provided embed code.
 
 🔹 Question 11: You need to configure advanced alerting rules in Grafana to detect complex patterns or anomalies in metric data. How would you define and configure advanced alerting rules?
+I would use grafans advanced alerting features such as alerting threshold, anomalies and detection and complex query condition to define
+alerting rules that detect specific patterens or anomilies in metric data. 
+I would configure alerting conditions based on statistical analysis, trend detection or machine learning algoritham to trigger alerts wne
+predefined criteria met.
 
 🔹 Question 12: Your team needs to add custom annotations to Grafana dashboards to mark important events or changes. How would you create and manage custom annotations in Grafana?
+ grafanas custom anotation feature to add annotation to dashboard, specifying relevent metadata such as event time stamps, descriptions and tags
+ I would create annotations manually or programmatically using grafanas HTTP API or external data soucre.           
+Annotations can provide valuable context and visisbility into events or changes that imoact monitoring and analysis.
 
 🔹 Question 13: Your organization uses Grafana to visualize metrics from remote data sources located in different geographical regions. How would you configure Grafana to fetch data from remote data sources efficiently?
+
 
 🔹 Question 14: Your organization requires granular access control for Grafana to enforce security policies and restrict access to sensitive data. How would you configure role-based access control (RBAC) in Grafana?
 
