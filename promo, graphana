@@ -48,6 +48,7 @@ users can then use the custom visualize data from proprietary soucres.
 
 🔹 Question 10: You need to share Grafana dashboards with external stakeholders who do not have access to the Grafana instance. How would you share and embed Grafana dashboards in external websites or portals?
 
+
 🔹 Question 11: You need to configure advanced alerting rules in Grafana to detect complex patterns or anomalies in metric data. How would you define and configure advanced alerting rules?
 
 🔹 Question 12: Your team needs to add custom annotations to Grafana dashboards to mark important events or changes. How would you create and manage custom annotations in Grafana?
