@@ -117,8 +117,18 @@ playbook that utilize the kub modules or command line tools to perform task such
 by abstractiong kub operations to ansible tasks, i can automate cluster management task and ensure consistency configuration entire cluster.
 
 🔹 Question 13: Your organization needs to ensure compliance with security policies and regulatory requirements. How would you use Ansible to perform compliance checks?
+Ansible playbook that exicute security scanns and configuration audits and complains checks againest predefined bench mark of policies.
+Palybook would use ansible built in modules or custom scripts to assess the state of managed systems and report by deviations from the desired configuration.
+Enabling remediation actions to bring systems into complains. 
+
 🔹 Question 14: Your organization is migrating workloads from on-premises data centers to the cloud. How would you orchestrate the migration process with Ansible?
+We can provision cloud resources  and configuration of network settings and deployment of application workloads in the target cloud env using playbook.
+By abstracting infrastucture operations into ansible task, I can ensure consistent deployment patteren and streamline the migration process acriss multiple env.
+
 🔹 Question 15: You want to implement self-healing capabilities for critical systems using Ansible. How would you design and deploy self-healing workflows?
+playbook monitor system health and performence metricks, detect anomilies  or failures and trigger automated remediation actions to restore service availability.
+By integrating Ansible with monitoring and alerting systems, I can orchestrate self- healing workflows that proactively respond to incidents nad minimize downtime,
+esurinh continous operation of critical systems. 
 
 
 
