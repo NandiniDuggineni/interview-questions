@@ -26,8 +26,8 @@ access without exposing your credentials.
 Yes. public access should be enabled. in properties
 
 🔹 Question 10: How can you transfer data into and out of Amazon S3?
-using AWS console, cli, SDK and third party tools. Additioanly large scal data transfer can be optimized using Amazon s3
-transfter acceleration or aws snowball for offline data transfer. 
+using AWS console, cli, SDK and third-party tools. Additionally, large scale data transfer can be optimized using Amazon s3
+transfer acceleration or AWS Snowball for offline data transfer. 
 
 11. Is there any possible way to restore the deleted s3 oblects?
 yes. versioning enabled and replication enabled. 
