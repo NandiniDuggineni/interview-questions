@@ -1,0 +1,12 @@
+1. what is linux. 
+It's a open source operating system. it has kernel. ubutu, centos, rhel, debian
+
+2. differentiable bwtween linux and unix- before linix unix was using by everyone. 
+
+3. system hierarchy in linux. 
+it has a tree strcture, file and directories. /root, /bin, /home, /etc, /tmp
+
+4. shall in lunix
+shell using to execute the commands, bash, zsh, tcsh, this is way to interract with system. 
+
+5. how do you find files in linux.
