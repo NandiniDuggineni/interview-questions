@@ -158,7 +158,60 @@ How can you achieve cost savings without sacrificing performance?
 
 🔹 Question 15: How would you migrate an on-premises application to AWS while maintaining the same IP range in the VPC?
 1. create vpc with same cidr block.
-2. to eastablish a connection use direct connect or site to site vpn 
+2. to eastablish a connection use direct connect or site to site VPN 
+
+Senario EFS
+
+🔹 Question 1: What is AWS EFS, and how is it different from Amazon S3 and EBS?
+1. Elastic file storage. structured data (directory). Share between multiple EC2. it support NFS ( n/w file system protocol)
+2. object storage. unstructed data 
+3. block storage . titly coupled with EC2
+
+🔹 Question 2: What are the key features of AWS EFS?
+1. auto scale up scale down
+2. multiple ec2 instance can access concurantly
+3. support standard linux operations
+4. data store multiple az'z
+5. performence is high it uses general purpose performence mode. maxi/o
+6. automatically move the infrequent accesssed files 
+
+🔹 Question 3: How does AWS EFS handle security?
+1. supports data at rest, use encryption key machanisum
+2. controls who can access and manage the EFS
+3. access control via sg and nacl
+
+🔹 Question 4: What are the performance modes in AWS EFS, and when would you use each?
+1. General purpose or MAX I/O
+
+🔹 Question 5: Explain the cost model of AWS EFS.
+1. standard stograge and infrequent access (1a)
+2. data transfer cost : moving data outside region cost 
+
+🔹 Question 6: How do you mount an EFS file system on an EC2 instance?
+1. Aws console setup EFS in your vpc
+2. depends on install efs_utiltis, or efs_common in EC2 instance
+3. mount the file system sudo mount -t nfs4 -o nfsvers=4.1 <fs dns name>/: /mnt/efs
+4. verify the mounting df -h
+
+🔹 Question 7: What are the use cases of AWS EFS?
+1. web hosting
+2. big data analysis
+3. container storage
+4. backup and archeving
+5. Media processing
+
+🔹 Question 8: What is AWS EFS Lifecycle Management, and how does it help optimize costs?
+1. It automatically move the data which is not accessing to infrequent access 1A - cost optimization
+
+🔹 Question 9: Can you use EFS with containers in AWS ECS or EKS?
+1.  yes. it used as persistent storage. 
+
+🔹 Question 10: What are the limitations of AWS EFS?
+1. high latency compared to ebs
+2. only support nfs 4 and nfs 4.1
+3. primary linux, limited to windows
+
+
 
 
 
