@@ -145,8 +145,12 @@ play book that uses apt or yum module to install security updates on the machine
 Ansible shceduling or integrated with cicd pipepline to ensure timely oatching of servers. 
 
 🔹 Question 7: You need to automate the backup of a MySQL database running on multiple servers. How would you accomplish this with Ansible?
-Ansible playbook that connects each db server execute a mysql dump command to create a backup of data base and trasfer a backup fikes to designated backup server or storage location.
+Ansible playbook that connects each db server execute a mysql dump command to create a backup of data base and trasfer a backup file to designated backup server or storage location.
 This playbook would be scheduled to run regulalry to ensure that database backups are performed consistently.
+mysqldump -u root -p mydatabase > backup.sql $(date +%y-%m%d)
+Method	          How to use
+-p with prompt	  mysqldump -u user -p db > backup.sql
+~/.my.cnf config	Put creds in file, secure it, then mysqldump db > backup.sql
 
 🔹 Question 8: In the event of a disaster, you need to restore a critical application to a previous state using Ansible. How would you implement this?
 Ansible playbook that retrives the necessary configuration files from backup storage and deployes them to the target servers. This playbook would also include tasks to restore
