@@ -2,18 +2,115 @@ Senario based
 
 🔹 Question 1: You are tasked with designing a scalable web application on AWS to handle fluctuating traffic. 
 What services and architecture would you use to ensure both availability and cost-efficiency?
+1. High availability - we can deploy application in multi AZ deployment
+2. high sclable - we have auto scaling groups 
+3. ELD: To distribute the load between servers.
+4. Cost saving - store static content like images, CSS, js files in Amazon s3 and use cloud formation cdn servervice for distribution.
+5. use: Amazon RDS or Aurora with multi-AZ deployments for high availability of the application. 
+6. Implement route 53 for DNS resolution and to perform health checks on server for availability.
 
-🔹 Question 2: Your application needs to process large volumes of data and convert it into various formats for downstream services. What AWS services would you use to automate and scale this process?
-🔹 Question 3: Your organization has decided to use AWS for disaster recovery but wants to minimize costs. What disaster recovery architecture would you recommend?
+🔹 Question 2: Your application needs to process large volumes of data and convert it into various formats for downstream services. 
+What AWS services would you use to automate and scale this process?
+1. Store the data in amazon s3. 
+2. Use s3 event notification to trigger lamda function as soon as obejct uploaded in the bucket. 
+3. Lamda will process the data.
+4. we can slso use SQS for queing and sns for notification.
+5. if we need parallel execution, use AWS batch processing.
+6. Finally store the processed data in S3 or warehouse like redshift
+
+
+🔹 Question 3: Your organization has decided to use AWS for disaster recovery but wants to minimize costs. 
+What disaster recovery architecture would you recommend?
+1. Use the poilot light stratogy- menas only run the required resoucre like ami, database
+2. Configure the cloud formation template and auto scaling for resource creation.
+3. Use route 53 for failover
+4. take the backup of ami and store it in s3
+
 🔹 Question 4: You need to ensure secure and compliant data transfer between your on-premises data center and AWS. What would you recommend?
-🔹 Question 5: You are managing a microservices-based application that is experiencing latency due to high database load. How would you optimize the architecture?
-🔹 Question 6: You have a critical application that cannot tolerate any downtime. How would you architect this solution on AWS to achieve high availability?
-🔹 Question 7: Your application requires secure storage of sensitive customer data, with auditing and monitoring of all access attempts. What would you do?
-🔹 Question 8: Your team needs a continuous integration/continuous delivery (CI/CD) pipeline to automatically deploy applications in AWS. How would you set it up?
-🔹 Question 9: Your web application experiences a large number of requests from a particular geographical region causing latency. How would you improve performance for users in that region?
-🔹 Question 10: You need to implement fine-grained access control for a growing number of users accessing an AWS S3 bucket. How would you design this?
-🔹 Question 11: Your application is built on containers, and you need a solution that allows automatic scaling of containers without managing underlying servers. What AWS service would you recommend?
-🔹 Question 12: You need to archive data that is rarely accessed but must be retained for compliance reasons. How would you store this data in AWS?
-🔹 Question 13: You need to optimize costs for a fleet of EC2 instances that run non-critical workloads during business hours. How can you achieve cost savings without sacrificing performance?
+1. Use AWS direct connect 
+2. or AWS site to site VPN
+3. Use SSL/TLS CERTIFICATION ( CLOUD FRONT, ROUTE 53, RDS) TO encrypt data during transit
+4. to safe the at rest use KMS key, server side encryption and client side enkryption.
+5. Enforce strict IAM policy and implement least privilege access and roles 
+
+🔹 Question 5: You are managing a microservices-based application that is experiencing latency due to high database load. 
+How would you optimize the architecture?
+1. high database load means read write operation on the database is high.
+2. for read operation - use read replica ( rds rr, aurora read replica)
+3. use AWS X-Ray to trace the request and check which services responding slow
+4. for write it suggested to use dynamodb for high write thorught.
+
+🔹 Question 6: You have a critical application that cannot tolerate any downtime. How would you architect this solution on AWS 
+to achieve high availability?
+1. Use multi-az, ELB, Auto scaling, RDS-Multi AZ, Route 53 (latency based)
+2. critical work loads use reservered or spot instance.
+3. store obeject replication in s3 it will sore the data in multiple availability zones.
+
+🔹 Question 7: Your application requires secure storage of sensitive customer data, 
+with auditing and monitoring of all access attempts. What would you do?
+1. store in s3, 
+2. Enable s3 bucket policies and acls
+3. use KMS encryption, server side and client side, aes 256
+4. data at transit ssl.tls.
+5. oeject lock enabled (immutability)
+6. access logs and guard duty 
+7. cloud trail log
+
+🔹 Question 8: Your team needs a continuous integration/continuous delivery (CI/CD) pipeline to automatically deploy applications in AWS. 
+How would you set it up?
+1, code pipeline ( to archestrate between version control (git) + cloud build)
+2. code build ( to build, test, scan )
+3, code deploy ( to deploy eks, ebs, ec2)
+4. cloud watch monitoring 
+
+🔹 Question 9: Your web application experiences a large number of requests from a particular geographical region causing latency. 
+How would you improve performance for users in that region?
+1. use cloud front (cdn) service to cache the data on edge location
+2. use route 53 geo routing technice to trasfer the data.
+
+🔹 Question 10: You need to implement fine-grained access control for a growing number of users accessing an AWS S3 bucket. 
+How would you design this?
+1. enforce iam plicies and roles and implement least privilages access
+2. use bucket policies, acls.
+3. Access logs for unauthorized access, also apply guard duty
+4. use awscognito for user authentication
+
+🔹 Question 11: Your application is built on containers, and you need a solution that allows automatic scaling of containers without 
+managing underlying servers. What AWS service would you recommend?
+1. ecs, EKS FARGATS
+2. and it autoscale container instance based on requirement set
+
+🔹 Question 12: You need to archive data that is rarely accessed but must be retained for compliance reasons. 
+How would you store this data in AWS?
+1. Use S3 life cycle plicy to move less frequent access data to glacier 
+2. also we can enforce retntion policy for governce mode ( authorized person can delete) and complaince mode (can't delete until retention over)
+3. use vault lock at glacier
+
+🔹 Question 13: You need to optimize costs for a fleet of EC2 instances that run non-critical workloads during business hours.
+How can you achieve cost savings without sacrificing performance?
+1. critical work load use reservered instance or spot instance
+2. for non critical workloads use spot instance
+3. use auto scaling group to scale down the resources
+
 🔹 Question 14: Your application handles sensitive data, and you need to ensure encryption of data in transit and at rest. How would you architect this solution on AWS?
 🔹 Question 15: You need to migrate a large database from your on-premises environment to AWS with minimal downtime. How would you achieve this?
+1. use aws database migration service, for db, for application aws migration hub or application migration
+2. it replicate the data between source and destination
+3. or use snow ball for larger data sets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
