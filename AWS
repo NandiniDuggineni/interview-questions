@@ -1,1 +1,19 @@
+Senario based 
 
+🔹 Question 1: You are tasked with designing a scalable web application on AWS to handle fluctuating traffic. 
+What services and architecture would you use to ensure both availability and cost-efficiency?
+
+🔹 Question 2: Your application needs to process large volumes of data and convert it into various formats for downstream services. What AWS services would you use to automate and scale this process?
+🔹 Question 3: Your organization has decided to use AWS for disaster recovery but wants to minimize costs. What disaster recovery architecture would you recommend?
+🔹 Question 4: You need to ensure secure and compliant data transfer between your on-premises data center and AWS. What would you recommend?
+🔹 Question 5: You are managing a microservices-based application that is experiencing latency due to high database load. How would you optimize the architecture?
+🔹 Question 6: You have a critical application that cannot tolerate any downtime. How would you architect this solution on AWS to achieve high availability?
+🔹 Question 7: Your application requires secure storage of sensitive customer data, with auditing and monitoring of all access attempts. What would you do?
+🔹 Question 8: Your team needs a continuous integration/continuous delivery (CI/CD) pipeline to automatically deploy applications in AWS. How would you set it up?
+🔹 Question 9: Your web application experiences a large number of requests from a particular geographical region causing latency. How would you improve performance for users in that region?
+🔹 Question 10: You need to implement fine-grained access control for a growing number of users accessing an AWS S3 bucket. How would you design this?
+🔹 Question 11: Your application is built on containers, and you need a solution that allows automatic scaling of containers without managing underlying servers. What AWS service would you recommend?
+🔹 Question 12: You need to archive data that is rarely accessed but must be retained for compliance reasons. How would you store this data in AWS?
+🔹 Question 13: You need to optimize costs for a fleet of EC2 instances that run non-critical workloads during business hours. How can you achieve cost savings without sacrificing performance?
+🔹 Question 14: Your application handles sensitive data, and you need to ensure encryption of data in transit and at rest. How would you architect this solution on AWS?
+🔹 Question 15: You need to migrate a large database from your on-premises environment to AWS with minimal downtime. How would you achieve this?
