@@ -90,7 +90,7 @@ variables and configuration settings to customise these env,
 
 4. Strategies to test playbooks and roles?
 Ansible playbooks and roles can tested using tools like Ansible-lint (syntax error), 
-Molecule -  automates the testing across different platforms using docker or vagrant. 
+Molecule -  automates the testing across different platforms like docker or vagrant. molecule create/converge/verify/test
 test infra -  used to perform integration testing by verifying expected system state changes. 
 
 5. How to we implemet blue-green ?
@@ -99,17 +99,17 @@ it automate the deployment process include providing, configuring and updating i
 
 6. How to handle rolling updates and zero down time deployments?
 using strategies such as serial execution and health checks and service monitoring.
-Ansible playbook can automate the process of updating infrastucture components one by ine while ensuing that services remain available and
+Ansible playbook can automate the process of updating infrastucture components one by one while ensuing that services remain available and
 responsive throught the deployment process. 
 
-7. what are ansible tower job templates and how do you use the to automate tasks?
-Ansible tower job teamplates are reuseable configuratios for running ansible playbook or ad-hoc commands on managed hosts.
+7. What are Ansible Tower job templates, and how do you use them to automate tasks?
+Ansible Tower job templates are reusable configurations for running Ansible playbooks or ad-hoc commands on managed hosts.
 They allow you to define the playbook, inventory, credentials and other parameters needed to execute tasks,
-making it easy to automate routine operations and workflows in tower's web interface or through API calls.
+making it easy to automate routine operations and workflows in Tower's web interface or through API calls.
 
-8. Explain how you can orchestrate complex workflows and dependecies using ansible tower workflows?
-tower alllow to archestrate complex automation workflow with dependecies and conditional logic and manula approvals.
-workflows can chain together multiple job templates, running tasks in parallel or sequentially and waiting for user input or
+8. Explain how you can orchestrate complex workflows and dependencies using Ansible Tower workflows.
+tower allow to orchestrate complex automation workflow with dependencies and conditional logic and manual approvals.
+Workflows can chain together multiple job templates, running tasks in parallel or sequentially and waiting for user input or
 external trigger before proceeding to the next step.
 This enable you to automate end-to-end process and stream line IT operation effecintly. 
 
@@ -128,6 +128,13 @@ playbook/role tasks would used to stop the existing application & deploy new ver
 🔹 Question 4: You want to perform rolling updates to a group of servers without causing downtime. How would you implement this using Ansible?
 Ansible serial keyword and setting the desired number or percentage to update number of servers simultaneously. Ansible would update one by one or small batche ensuring application 
 ramins available though out the update process.
+- hosts: webservers
+  serial: 2      # Run tasks on 2 hosts at a time
+  tasks:
+    - name: Update package cache
+      apt:
+        update_cache: yes
+
 
 🔹 Question 5: You have a load balancer that needs to be updated with the IP addresses of newly provisioned servers. How would you automate this task with Ansible?
 Ansible playbook that dynamically retrive ip address of the new servers and updates the load balancer configuration accordingly.
