@@ -137,12 +137,12 @@ ramins available though out the update process.
 
 
 🔹 Question 5: You have a load balancer that needs to be updated with the IP addresses of newly provisioned servers. How would you automate this task with Ansible?
-Ansible playbook that dynamically retrive ip address of the new servers and updates the load balancer configuration accordingly.
+Ansible playbook that dynamically retrive ip address of the new servers and updates the load balancer configuration accordingly. plugin - plugin: aws_ec2 or scriprt
 playbook would use ansible ec2_instance_facts module to gather information about the provisined instance and then use module to update load balancer configuration.
 
 🔹 Question 6: Your organization requires regular security patching of servers. How would you automate the process using Ansible?
-play book that uses apt or yum module to install security updates on the machines. Playbook specify the necessary package to be updated and would run periodically using Ansible shceduling 
-or integrated with cicd pipepline to ensure timely oatching of servers. 
+play book that uses apt or yum module to install security updates on the machines. Playbook specify the necessary package to be updated and would run periodically using 
+Ansible shceduling or integrated with cicd pipepline to ensure timely oatching of servers. 
 
 🔹 Question 7: You need to automate the backup of a MySQL database running on multiple servers. How would you accomplish this with Ansible?
 Ansible playbook that connects each db server execute a mysql dump command to create a backup of data base and trasfer a backup fikes to designated backup server or storage location.
