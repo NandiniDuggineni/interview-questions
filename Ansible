@@ -48,14 +48,31 @@ Gather Facts Manually - ansible all -m setup
 
 13. Handling error
 it support error handling, ignore_errors, failed_when, and block statements. Log error messages and take appropriate actions based on the output.
+Continue execution even if the task fails.
+- name: Try to stop a service (ignore if not running)
+  ansible.builtin.systemd:
+    name: apache2
+    state: stopped
+  ignore_errors: yes
 
+This fails the task only when disk is 100% full, even if the command itself succeeded.
+- name: Check disk space
+  command: df -h /
+  register: disk_result
+  failed_when: "'100%' in disk_result.stdout"
+
+Technique	              Purpose
+ignore_errors       	  Skip failure and continue playbook
+failed_when	            Define custom failure logic
+block/rescue - always 	Try/catch-style structured error handling
+assert	                Explicitly fail if a condition is false
+when	                  Skip task based on a condition
 
 14. What is RBAC?
 as an admin, we can define granular permissions to different users/teams. Only authorized users can log in, mainly to enhance security. 
 
 15. Integrate Ansible with other tools?
 plugins, API, and webhooks. Git, jenkins and Prometheus, and graphana. 
-
 
 Advanced interview questions.
 1. what are ansible vault? how they manage sensitive data?
@@ -72,7 +89,7 @@ Dynamic inventory plugins and group variables for flexible environment managemen
 variables and configuration settings to customise these env, 
 
 4. Strategies to test playbooks and roles?
-Ansible playbooks and roles can tested using tools like Ansible-lint (systax error), 
+Ansible playbooks and roles can tested using tools like Ansible-lint (syntax error), 
 Molecule -  automates the testing across different platforms using docker or vagrant. 
 test infra -  used to perform integration testing by verifying expected system state changes. 
 
