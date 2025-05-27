@@ -157,12 +157,12 @@ Ansible playbook that retrives the necessary configuration files from backup sto
 database backups and other dependencies ensuing that the application is fully recovered to its pervious state.
 
 🔹 Question 9: You have separate development, staging, and production environments, each with different configuration settings. How would you manage deployments across these environments using Ansible?
-in Ansible inventory we can define separate groups for each environment and specofi environment specific variables in playbooks. 
-by parametarizing the task and leveraging the dynamic inventory, i can ensure that deployment are tailored to each env requirement while maintaining the consistency accross env.
+in Ansible inventory, we can define separate groups for each environment and specify environment-specific variables in playbooks. 
+by parameterizing the task and leveraging the dynamic inventory, i can ensure that deployment are tailored to each env requirement while maintaining the consistency accross env.
 
-🔹 Question 10: You need to configure a high availability setup for a critical application using Ansible. How would you approach this task?
-Ansible playbook provision the redundent infrstructure components such as load balancer auto scaling groups and database clusters across multiple availability zones and regions.
-playbook would include taks to configure failover machanisum, health checks and monitoring alerts to ensure continuos availability and resilience of application.
+🔹 Question 10: You need to configure a high-availability setup for a critical application using Ansible. How would you approach this task?
+Ansible playbook provisions the redundant infrastructure components such as load balancer auto scaling groups and database clusters across multiple availability zones and regions.
+playbook would include taks to configure failover mechanism, health checks and monitoring alerts to ensure continuos availability and resilience of application.
 
 🔹 Question 11: You're managing a Docker Swarm cluster and need to deploy a new service across multiple nodes. How would you orchestrate this deployment with Ansible?
 pkaybook which interact with cluster API to deploy the new specification to the cluster. Playbook would include tasks yo scale a service, configuration settings and manage service
@@ -174,7 +174,7 @@ by abstractiong kub operations to ansible tasks, i can automate cluster manageme
 
 🔹 Question 13: Your organization needs to ensure compliance with security policies and regulatory requirements. How would you use Ansible to perform compliance checks?
 Ansible playbook that exicute security scanns and configuration audits and complains checks againest predefined bench mark of policies.
-Palybook would use ansible built in modules or custom scripts to assess the state of managed systems and report by deviations from the desired configuration.
+Palybook would use ansible built in modules like trivy or custom scripts to assess the state of managed systems and report by deviations from the desired configuration.
 Enabling remediation actions to bring systems into complains. 
 
 🔹 Question 14: Your organization is migrating workloads from on-premises data centers to the cloud. How would you orchestrate the migration process with Ansible?
