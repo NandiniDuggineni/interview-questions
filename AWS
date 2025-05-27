@@ -98,6 +98,68 @@ How can you achieve cost savings without sacrificing performance?
 2. it replicate the data between source and destination
 3. or use snow ball for larger data sets
 
+  VPC-Senario based
+🔹 Question 1: You need to deploy a high-availability web application across multiple Availability Zones (AZs). How would you configure the VPC?
+1. vpc with multiple subnet acrroce multi-AZ
+2. configure pubsub - elb and nat private - webserver
+3. Attach igw to vpc and enable it for public subnet and configure route table accordingly
+4. private subnet attach nat gateway
+
+🔹 Question 2: Your company wants to restrict access to a VPC to a specific set of IP addresses. How can you accomplish this?
+1. use SG and NACL
+
+🔹 Question 3: You need secure, encrypted communication between your on-premises network and AWS VPC. What options are available?
+1. direct connect
+2. vpn
+
+🔹 Question 4: A company has deployed multiple VPCs in different regions but wants a unified network. How can you achieve inter-region connectivity?
+1. Transit gateway 
+2. VPC peering
+
+🔹 Question 5: An application running in a VPC needs access to an external API without direct internet access. How can this be achieved?
+1. NAT
+
+🔹 Question 6: You need to allow EC2 instances in private subnets to access S3 buckets without internet access. What is the best solution?
+1. VPC endpoint for s3
+2. S3 gateway endpoint without needing NAT gateway
+
+🔹 Question 7: Your company wants to monitor and log network traffic between subnets and instances within a VPC. How would you set this up?
+1. enable vpc flow log
+
+🔹 Question 8: An EC2 instance in a public subnet is unable to connect to the internet. What troubleshooting steps would you take?
+1. check route table if subnet properly configued with IGW
+2. check sg and nacl outbound traffic has enabled or not. 
+3. finally public ip assigned to it.
+
+🔹 Question 9: How would you isolate a specific workload in a VPC so it is accessible only within the VPC? 
+1.private subnet without IGW access, nat if needed
+2.sg, nacl
+
+🔹 Question 10: You’re tasked with configuring a multi-tier architecture in a VPC. Describe the subnet configuration.
+1. private subnet - public subnet 
+2. sg, nacl
+
+🔹 Question 11: Your company wants a secure way to connect hundreds of VPCs. How would you implement this?
+1. use transit gateway to connect 100' vpc. 
+2.it provides scalable hud-spocke model, we can comunicate on prem to aws environment
+
+🔹 Question 12: You’re asked to set up DNS resolution within a VPC. What would you configure?
+1. enable dns resolution and dns host name with in vpc. 
+2. for custom doamin use route 53 resolver, optionally set private hosted zones
+
+
+🔹 Question 13: A VPC needs to support IPv6. What steps are involved?
+1. First enable ipv6 at vpc by enabling ipv6 cidr block.
+2. update subnet configuration and adjust route table to support ipv6.
+3. modify sg, nacl to support ipv6
+
+🔹 Question 14: You need to enable cross-account access for resources in a VPC. What would you use?
+1. vpc peering or AWS recource access manager
+
+🔹 Question 15: How would you migrate an on-premises application to AWS while maintaining the same IP range in the VPC?
+1. create vpc with same cidr block.
+2. to eastablish a connection use direct connect or site to site vpn 
+
 
 
 
