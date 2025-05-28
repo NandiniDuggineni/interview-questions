@@ -215,18 +215,20 @@ How can you achieve cost savings without sacrificing performance?
 ======================= Senario Load balancer ==========================
 
 🔹 Question 1: You have a website with sudden spikes in traffic. How would you configure an AWS Load Balancer to handle unpredictable loads?
-1. Aws route 53, application load balancer with latency based routing policy. 
+1. Application load balancer with auto scaling enabled. 
+2. Set auto scaling policies based on cpu utilization to scale out or scal in based on sudden traffic spicks.
+3. Also configure health checks to monitor the health of instance.
 
 🔹 Question 2: How would you route traffic across multiple AWS regions for a globally distributed application?
+1. AWS global accelerator or route 53 with latency based routing and deploy an ALB in each region.
+
+🔹 Question 3: A new feature rollout is expected to increase traffic for a specific part of your application. How would you adjust your ALB and auto-scaling configuration to prepare?
 1. create target groups with an auto scaling group and configure application load balancer to balance the load. 
 2. increase the minimum capacity in he scaling policy for a smooth launch and monitor the performence metric.
 
-🔹 Question 3: A new feature rollout is expected to increase traffic for a specific part of your application. How would you adjust your ALB and auto-scaling configuration to prepare?
+🔹 Question 4: How would you set up health checks for your ALB to avoid routing traffic to unhealthy instances?
 1. Configure health checks and to ALB and remove unresponsive servers from the rotation. 
 2. Auto scaling target 
-
-🔹 Question 4: How would you set up health checks for your ALB to avoid routing traffic to unhealthy instances?
-Would set a target groups 
 
 🔹 Question 5: You need to reduce response time for users in multiple regions. What setup would you use for your load balancers?
 🔹 Question 6: If your ALB encounters an HTTP 504 timeout error, what steps would you take to troubleshoot?
@@ -235,17 +237,37 @@ Next I would examine the backup server response time to ensure they are within t
 if needed I would increase the timeout settings or optimize backend to reduce the processing time.
 
 🔹 Question 7: Describe how you would configure a load balancer to support both HTTP and HTTPS traffic with automatic redirection.
-
+1. i would configure two listeners on ALB: one for HTTP (80) and another for HTTPS( 443) .
+2. Using redirect action I would configure Http to route the traffic to HTTPS for secure tranmission. 
 
 🔹 Question 8: Your application needs sticky sessions. How would you configure this on your ALB?
-🔹 Question 9: How would you configure Auto Scaling to handle daily high traffic periods without manual intervention?
-🔹 Question 10: our application requires additional instances when memory usage hits 80%. How would you set this up in Auto Scaling?
-🔹 Question 11: How would you ensure that an Auto Scaling group maintains a minimum number of healthy instances even during instance failures?
-🔹 Question 12: Describe how you’d use Auto Scaling with a fleet of Spot Instances to save costs without compromising availability.
-🔹 Question 13: How would you configure Auto Scaling to prevent excessive scaling during temporary traffic spikes?
-🔹 Question 14: What steps would you take if your Auto Scaling group was scaling in and terminating instances too quickly, leading to downtime?
-🔹 Question 15: Your application has varying load levels in different regions. How would you configure Auto Scaling for this setup?
+Stickey session usually maintain the session consistency for all the queries of a particular customer. 
+1. in the target group of ALB we have a session stickiness feature, and we can provide appropriate time. 1 sec to 7 days. 
+but we should avoid giving long time, because it causes an un even loads. ecommerce chat - 30 min, online forms - 15min, short task - 5-15 min.
 
+🔹 Question 9: How would you configure Auto Scaling to handle daily high traffic periods without manual intervention?
+Scaling policies to scale up or scale down based on the usage. 
+
+🔹 Question 10: our application requires additional instances when memory usage hits 80%. How would you set this up in Auto Scaling?
+Traget tracking scaling policy with cooldown period. 
+
+🔹 Question 11: How would you ensure that an Auto Scaling group maintains a minimum number of healthy instances even during instance failures?
+in autoscaling group we can give min, max and desired count to maintain instance incase system goes down.
+
+🔹 Question 12: Describe how you’d use Auto Scaling with a fleet of Spot Instances to save costs without compromising availability.
+1. use mixed instance policy with sport and on-demand.
+2. we can use capacity rebalance to replace interrupted sport incstance with available onces.
+
+🔹 Question 13: How would you configure Auto Scaling to prevent excessive scaling during temporary traffic spikes?
+1. we can use step scaling with gradual increase based on the severity of the metric threshold.
+2. or tragrget tracking with cool down period.
+
+🔹 Question 14: What steps would you take if your Auto Scaling group was scaling in and terminating instances too quickly, leading to downtime?
+1. I would adjust cool down period to delay scale in action, giving instance more time to process requ.
+
+🔹 Question 15: Your application has varying load levels in different regions. How would you configure Auto Scaling for this setup?
+1. i would use different scaling groups in each region to handle region-specific loads independently. 
+2. use AWS global accelerator or orute 53 with latency based routing to distribute traffic.
 
 
 
