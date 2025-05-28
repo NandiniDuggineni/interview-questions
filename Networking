@@ -407,10 +407,13 @@ Use Case:
 TLS/SSL (HTTPS), email encryption, SSH, digital signatures
 ===============================
 12. What is the difference between unicast, multicast, and broadcast?
-
+Unicast = one-to-one
+Multicast = one-to-many (specific group)
+Broadcast = one-to-all (everyone on the network)
 ============================
 Advanced Network Interview Questions
 1. What is BGP and how does it work?
+Border Gateway Protocol - find best path for sending a data. -  it makes routing decisions based on paths, rules, and policies rather than just shortest distance.
 
 2. Explain MPLS and its benefits.
 
@@ -419,12 +422,39 @@ Advanced Network Interview Questions
 4. What are the differences between TCP congestion control algorithms?
 
 5. Explain how SSL/TLS works.
+Confidentiality: Data is encrypted, so attackers can’t read it.
+Integrity: Data cannot be altered without detection.
+Authentication: The server’s identity is verified, protecting against impersonation.
+Client Hello - This message includes supported TLS versions, encryption algorithms (cipher suites), and a random number.
+Server Hello - The server responds with its own “Hello,” choosing the TLS version and cipher suite from the client’s options.
+The server also sends its digital certificate, which contains its public key and identity information, signed by a trusted Certificate Authority (CA).
+
+Certificate Verification - The client checks the server’s certificate to confirm it’s valid and issued by a trusted CA.
+This helps ensure you’re communicating with the legitimate server, not an impostor.
+
+Key Exchange
+The client and server securely agree on a shared secret key to encrypt further communication.
+Depending on the cipher suite, this can happen via Diffie-Hellman key exchange, or by the client encrypting a “pre-master secret” with the server’s public key.
+
+Session Keys Creation
+Both client and server generate symmetric encryption keys from the shared secret.
+Symmetric encryption is much faster for the actual data transfer.
+
+Finished Messages
+Both sides send a “Finished” message encrypted with the session key, proving that key exchange was successful.
+
+Secure Communication Begins
+Now, all data between client and server is encrypted and secure from eavesdropping or tampering.
 
 6. What is a proxy server?
 
 7. How do you troubleshoot a slow network?
+check the network speed - iperf 
+
 
 8. What are some common network security threats and how do you mitigate them?
+Phishing Attacks, Denial of Service (DoS) / Distributed Denial of Service (DDoS), Man-in-the-Middle (MitM) Attacks,
+Unauthorized Access, SQL Injection & DNS Attacks
 
 9. What is a zero-trust network architecture?
 
