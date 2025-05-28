@@ -1,4 +1,4 @@
-Senario based AWS, S3. VPC, efs, Load balancer
+Senario based AWS, S3. VPC, efs, Load balancer, Networking
 
 🔹 Question 1: You are tasked with designing a scalable web application on AWS to handle fluctuating traffic. 
 What services and architecture would you use to ensure both availability and cost-efficiency?
@@ -268,6 +268,53 @@ in autoscaling group we can give min, max and desired count to maintain instance
 🔹 Question 15: Your application has varying load levels in different regions. How would you configure Auto Scaling for this setup?
 1. i would use different scaling groups in each region to handle region-specific loads independently. 
 2. use AWS global accelerator or orute 53 with latency based routing to distribute traffic.
+
+============= Networking ========================
+🔹 Question 1: What is Amazon VPC, and why is it important?
+🔹 Question 2: Explain the difference between a public and private subnet in a VPC.
+🔹 Question 3: How do you connect an on-premises data center to an AWS VPC?
+site to site VPN over the internet
+AWS direct connect and Transit gateway
+
+🔹 Question 4: What is an Elastic IP (EIP) in AWS?
+🔹 Question 5: What are the types of gateways available in AWS networking?
+IGW(inbound outbound access to subnet) NAT ( outbound access to private subnet) Transit gateway ( centralized hub for connecting multiple vpc and onprem) 
+VPN gateway ( connect VPC to onprem network )
+
+🔹 Question 6: What is the purpose of AWS Route 53?
+🔹 Question 7: Explain the role of Security Groups and NACLs in VPC security.
+
+🔹 Question 8: How does AWS ensure high availability and scalability for VPC endpoints?
+Interface endpoint - Uses the ENI
+Gateway endpoint - S3, dynamoDB without needing of public ip. 
+
+🔹 Question 9: What is a peering connection in AWS VPC, and how does it work?
+2 vpc communicate internally. 
+
+🔹 Question 10: What is AWS Global Accelerator?
+improves the application availability and performence by directing traffic to optimal endpoints using aws global network.
+
+🔹 Question 11: How do you implement disaster recovery for AWS networking?
+DNS failover routing using route 53. 
+Implement vpc peering and tansit gate way for redundent path.
+use direct connect for cross region backup connection. 
+
+🔹 Question 12: What is an ENI in AWS, and when would you use it?
+Elastic network Intervace, it virtual network card in vpc. maily for high availability by attaching eni to other instance. 
+running multiple network configuration on a single instance.
+
+🔹 Question 13: Explain AWS Transit Gateway and its benefits.
+If want to connect multiple vpc and on-site networks, we will usea  Transit Gateway it provides hub-and-spoke model. 
+centralized routing, cost effective and simplifies management.
+
+🔹 Question 14: What is the difference between NAT Instances and NAT Gateways?
+Gateway is fully managed aws service and NAT instance user managed EC2 instance. 
+
+🔹 Question 15: How does AWS support IPv6 in networking?
+AWS SUPPORT IPV6 in VPC with dual stack mode. 
+Route 53 for DBS resolution. IPV6 IDEAL FOR APLLICATION require large number of IP'S.
+
+
 
 
 
