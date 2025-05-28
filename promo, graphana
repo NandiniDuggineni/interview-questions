@@ -17,8 +17,7 @@ once the data source is configured, i would create dashboard and panels to visua
 
 🔹 Question 4: Your organization requires a highly available Grafana deployment to ensure uninterrupted access to monitoring dashboards. How would you design and implement a high availability setup for Grafana?
 I would deploy multiple instances of Graohana behind load balancer to distribute traffic and ensure redundancy.
-I would configure session affinity to maintain user sessions across grphana instance and use shared storage for storing session data
-and dashboard configuration. 
+I would configure session affinity to maintain user sessions across grphana instance and use shared storage for storing session data and dashboard configuration. 
 Additionally, i would set up database replication and clustering to ensure data consistency and fault tolerance.
 
 🔹 Question 5: Users are experiencing issues accessing Grafana dashboards embedded in external websites due to Cross-Origin Resource Sharing (CORS) restrictions. How would you configure Grafana to allow cross-origin requests?
