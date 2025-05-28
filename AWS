@@ -314,6 +314,23 @@ Gateway is fully managed aws service and NAT instance user managed EC2 instance.
 AWS SUPPORT IPV6 in VPC with dual stack mode. 
 Route 53 for DBS resolution. IPV6 IDEAL FOR APLLICATION require large number of IP'S.
 
+================= AWS security =============
+🔹 Question 1: What is AWS Identity and Access Management (IAM)? Why is it important?
+🔹 Question 2: What is the principle of least privilege? How does AWS implement it?
+🔹 Question 3: How does AWS secure data in transit and at rest?
+🔹 Question 4: What are AWS Key Management Service (KMS) and its use cases?
+🔹 Question 5: How does AWS handle DDoS attacks?
+🔹 Question 6: What is AWS Security Hub? How does it help?
+🔹 Question 7: How do you secure an S3 bucket?
+🔹 Question 8: What are AWS Organizations, and how do they enhance security?
+🔹 Question 9: What is AWS WAF, and how does it work?
+🔹 Question 10: What is Amazon GuardDuty?
+🔹 Question 11: How do you ensure compliance with AWS?
+🔹 Question 12: Explain the difference between Security Groups and NACLs.
+🔹 Question 13: What are IAM Roles, and how are they different from users?
+🔹 Question 14: How do you monitor security in AWS?
+🔹 Question 15: How do you secure RDS databases in AWS?
+
 
 
 
