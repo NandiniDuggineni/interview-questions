@@ -1,1 +1,34 @@
+🔹 Question 1: What is AWS RDS?
+1. RDS is a managed relational databse service that simplifies data base setup, operation and scaling. 
+2. it supports various databse engines, including MySQl, PostgressSQL, oracle and sql, Maria db
+
+🔹 Question 2: How does AWS RDS handle backups?
+1. RDS we can configure daily full backup and also transition logs for point in time recovery.
+
+🔹 Question 3: Can you change the DB instance class of a running RDS instance?
+Yes, you can modify db instance class of a running RDS instance to scale it vertically for more cpu, memory or storage capacity 
+
+🔹 Question 4: What is Multi-AZ deployment in RDS?
+We maintain stand by instance in different availability zones for high availability. 
+if primary instance fail, traffic is automatically switched to the standby instance.
+
+🔹 Question 5: How is data encrypted in AWS RDS?
+We can encrypt data at rest using KMS.
+1. u can encrypt at the time of db creation or else encrypt already created unencrypted db by taking snapshot and restored with encryption. with kMS ARN or KMS ID. using command line
+
+🔹 Question 6: What is the purpose of Read Replicas in RDS?
+those improve the read scalability. To offload the traffic from primary instance, we can create and use read heavy work loads. 
+
+🔹 Question 7: How can you monitor RDS performance?
+using cloud watch metric we can monitor the database performence. 
+Additinally we can enable enhanced monitoring to gether OS-level metrics and you can use databse logs for more detailed analysis. 
+
+🔹 Question 8: Can you install custom software on an RDS instance?
+No, because it aws managed service. we can only use which supports db engine.
+
+🔹 Question 9: What is the purpose of parameter groups in RDS?
+it allows to tune the performance, enable feature and adjust behaviour according to your specific requirement. 
+
+🔹 Question 10: How can you scale the storage capacity of an RDS instance?
+modify storage settings to scale instance either initail or already existing instance. 
 
