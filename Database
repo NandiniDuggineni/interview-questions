@@ -32,3 +32,42 @@ it allows to tune the performance, enable feature and adjust behaviour according
 🔹 Question 10: How can you scale the storage capacity of an RDS instance?
 modify storage settings to scale instance either initail or already existing instance. 
 
+
+=================DynamoDB============================
+
+🔹 Question 1: What is Amazon DynamoDB?
+No Sql DB, high perofrmence, scalability and easy to use. 
+
+🔹 Question 2: How does DynamoDB ensure high availability and fault tolerance?
+Multi AZ replication, Each write is synchronously replicated to ensure durability.
+
+🔹 Question 3: What are the key components of DynamoDB?
+tables, Item ( record ) and attribute ( field ) and primary key 
+
+🔹 Question 4: What is the difference between a primary key and a secondary index in DynamoDB?
+secondary index allow you to query attributes other than the index. primary key is unique attribute - like employee id.
+
+🔹 Question 5: How does DynamoDB handle read and write capacity units?
+provision read and write trhoughput it uses. and these defined based on the workload.
+
+🔹 Question 6: Can you change the provisioned throughput settings of a DynamoDB table after it's created?
+yes,
+
+🔹 Question 7: What is the purpose of DynamoDB Streams?
+it captures the changes to the items in the table and allow capturing real time processing. 
+
+🔹 Question 8: How does DynamoDB handle consistency and durability?
+it provide strong consistency for read write operations with in single region. durability across multi az
+
+🔹 Question 9: What is the difference between On-Demand and Provisioned Capacity in DynamoDB?
+provision require to provide read write capacity units in advance and is suitable for predictable workloads
+on deamd - pay per req and suitable for unpredictable work loads.
+
+🔹 Question 10: How can you optimize queries in DynamoDB?
+Desing the table based on the access pattern and appropriate index patterns and levarage feat
+ure like projection expression to retrive only the necessary attributes.
+
+
+
+
+
